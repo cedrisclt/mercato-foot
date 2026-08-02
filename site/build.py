@@ -149,6 +149,7 @@ def build():
     os.makedirs(os.path.join(PUBLIC, "assets"), exist_ok=True)
     shutil.copy(os.path.join(STATIC, "style.css"), os.path.join(PUBLIC, "assets", "style.css"))
     shutil.copy(os.path.join(STATIC, "app.js"), os.path.join(PUBLIC, "assets", "app.js"))
+    shutil.copytree(os.path.join(STATIC, "fonts"), os.path.join(PUBLIC, "assets", "fonts"))
 
     def content_hash(fn):
         return hashlib.sha256(open(fn, "rb").read()).hexdigest()[:10]

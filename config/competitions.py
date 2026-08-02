@@ -11,7 +11,7 @@ SEASON = 2026
 COMPETITIONS = [
     {"code": "FR1", "name": "Ligue 1", "slug": "ligue-1",
      "logo_url": "https://tmssl.akamaized.net/images/logo/header/fr1.png",
-     "color": "#ff2f97"},
+     "color": "#ff7fde"},
     {"code": "FR2", "name": "Ligue 2", "slug": "ligue-2",
      "logo_url": "https://tmssl.akamaized.net/images/logo/header/fr2.png",
      "color": "#0072ce"},

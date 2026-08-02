@@ -1,7 +1,22 @@
 /* ==========================================================================
    Mercato Foot — "Bold club-identity" design system
-   Dependency-free static CSS: system fonts only, no external requests.
+   Dependency-free static CSS: self-hosted font file, no CDN/external
+   requests at runtime.
    ========================================================================== */
+
+/* Anton (Google Fonts, SIL Open Font License — free to self-host/redistribute).
+   Stand-in for the heavy condensed display faces official league sites use
+   for headings/nav (those are commercial fonts, e.g. Insatiable Display —
+   not ours to ship); Anton gets the same bold-condensed-uppercase energy
+   from a font we're actually licensed to bundle. */
+@font-face{
+  font-family:"Anton";
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url("fonts/Anton-Regular.woff2") format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
 
 :root{
   --bg:#0a0c10;
@@ -25,7 +40,7 @@
   /* Bold-condensed "display" stack — echoes the punchy all-caps look of
      official French league sites without bundling their licensed fonts
      (Insatiable Display / GT America are commercial, not ours to ship). */
-  --font-display:"Arial Narrow","Helvetica Neue Condensed","Roboto Condensed",
+  --font-display:"Anton","Arial Narrow","Helvetica Neue Condensed","Roboto Condensed",
     -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 
