@@ -22,6 +22,13 @@ PUBLIC = os.path.join(ROOT, "public")
 
 sys.path.insert(0, ROOT)
 from config.competitions import COMPETITIONS
+from config.short_names import SHORT_NAMES
+
+
+def dname(club_id, fallback):
+    """Canonical short display name for a club id, else whatever name we
+    were given (e.g. Transfermarkt's own wording for an untracked club)."""
+    return SHORT_NAMES.get(club_id, fallback)
 
 
 def fmt_money(value, signed=False):
@@ -62,12 +69,18 @@ def season_label(season):
     return f"{season}/{(int(season) + 1) % 100:02d}"
 
 
-def fmt_match(m, club_lookup_by_name):
-    """Enrich one raw fixture dict with display-ready fields."""
-    opp = club_lookup_by_name.get(m["opponent"])
+def fmt_match(m, clubs_by_id):
+    """Enrich one raw fixture dict with display-ready fields. Matched by
+    Transfermarkt club id, not by name text — Transfermarkt itself writes
+    a given club's name differently from one page to the next (e.g.
+    "R. Strasbourg" on a fixture list vs "RC Strasbourg Alsace" on its own
+    competition table), so id is the only reliable join key."""
+    opp_id = m.get("opponent_id")
+    opp = clubs_by_id.get(opp_id)
     return {
         **m,
         "season_label": season_label(m["season"]),
+        "opponent": dname(opp_id, m["opponent"]),
         "opponent_code": opp["code"] if opp else None,
         "opponent_logo_own": opp["logo_url"] if opp else None,
         "score_display": (f"{m['score']} {m['extra']}".strip() if m.get("extra") else m.get("score", "")),
@@ -77,14 +90,16 @@ def fmt_match(m, club_lookup_by_name):
 def enrich_standings(rows, clubs_by_id):
     out = []
     for r in rows:
-        c = clubs_by_id.get(r.get("club_id"))
-        out.append({**r, "code": c["code"] if c else None,
+        cid = r.get("club_id")
+        c = clubs_by_id.get(cid)
+        out.append({**r, "club_name": dname(cid, r.get("club_name")),
+                    "code": c["code"] if c else None,
                     "logo_url": c["logo_url"] if c else r.get("logo_url", ""),
                     "accent": c["accent"] if c else None})
     return out
 
 
-def build_matchday_view(clubs_raw, name_to_club, season):
+def build_matchday_view(clubs_raw, clubs_by_id, season):
     """Reconstruct a round-by-round (journée) view of the league phase for
     one season, purely from the per-club fixture lists already scraped —
     no extra requests. The "league" competition is whichever one accounts
@@ -109,16 +124,17 @@ def build_matchday_view(clubs_raw, name_to_club, season):
 
     by_md = defaultdict(list)
     for c in clubs_raw:
-        home_ctx = name_to_club.get(c["name"])
+        home_ctx = clubs_by_id.get(c["id"])
         for m in club_fixtures(c):
             if m["season"] != season or m["comp"] != league_comp_name or m["venue"] != "home":
                 continue
-            away_ctx = name_to_club.get(m["opponent"])
+            opp_id = m.get("opponent_id")
+            away_ctx = clubs_by_id.get(opp_id)
             by_md[m["matchday"]].append({
                 "date": m["date"], "date_iso": m["date_iso"], "time": m["time"],
-                "home_name": c["name"], "home_code": home_ctx["code"] if home_ctx else None,
+                "home_name": dname(c["id"], c["name"]), "home_code": home_ctx["code"] if home_ctx else None,
                 "home_logo": home_ctx["logo_url"] if home_ctx else "",
-                "away_name": m["opponent"], "away_code": away_ctx["code"] if away_ctx else None,
+                "away_name": dname(opp_id, m["opponent"]), "away_code": away_ctx["code"] if away_ctx else None,
                 "away_logo": away_ctx["logo_url"] if away_ctx else m.get("opponent_logo", ""),
                 "score": m.get("score", ""), "extra": m.get("extra", ""), "played": m.get("played", False),
             })
@@ -199,13 +215,13 @@ def build():
             dep_total = sum(t.get("val", 0) for t in dep)
             solde = dep_total - arr_total
             clubs_ctx.append({
-                "code": c["code"], "id": c["id"], "name": c["name"], "logo_url": c["logo_url"],
+                "code": c["code"], "id": c["id"], "name": dname(c["id"], c["name"]),
+                "full_name": c["name"], "logo_url": c["logo_url"],
                 "accent": c["accent"], "arr": arr, "dep": dep,
                 "arr_total_fmt": fmt_money(arr_total), "dep_total_fmt": fmt_money(dep_total),
                 "solde": solde, "solde_fmt": fmt_money(solde, signed=True),
             })
 
-        name_to_club = {c["name"]: c for c in clubs_ctx}
         clubs_by_id = {c["id"]: c for c in clubs_ctx}
 
         # Full standings history: {season(str): [rows]}, most recent season
@@ -220,7 +236,7 @@ def build():
                          for s in standings_seasons},
         }
 
-        matchday_ctx = build_matchday_view(d["clubs"], name_to_club, d["season"])
+        matchday_ctx = build_matchday_view(d["clubs"], clubs_by_id, d["season"])
 
         # Enrich the "latest arrivals" strip with the destination club's
         # crest/accent so each entry can carry that club's visual identity.
@@ -267,7 +283,7 @@ def build():
             if not isinstance(raw_fixtures, list):
                 raw_fixtures = []  # pre-migration shape, ignore
             fixtures_ctx = sorted(
-                (fmt_match(m, name_to_club) for m in raw_fixtures),
+                (fmt_match(m, clubs_by_id) for m in raw_fixtures),
                 key=lambda m: (m["date_iso"], m["time"]), reverse=True)
             fixtures_seasons = sorted({m["season"] for m in fixtures_ctx}, reverse=True)
             fixtures_comps = sorted({m["comp"] for m in fixtures_ctx})
@@ -278,7 +294,8 @@ def build():
                 if row:
                     own_history.append({**row, "season": s, "season_label": season_label(s)})
 
-            club_ctx = {"code": c["code"], "name": c["name"], "logo_url": c["logo_url"],
+            club_ctx = {"code": c["code"], "name": dname(c["id"], c["name"]),
+                       "full_name": c["name"], "logo_url": c["logo_url"],
                        "accent": c["accent"], "info": c.get("info", {}),
                        "honours": honours, "fixtures": fixtures_ctx,
                        "fixtures_seasons": fixtures_seasons, "fixtures_comps": fixtures_comps,

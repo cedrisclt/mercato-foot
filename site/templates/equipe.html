@@ -35,6 +35,9 @@
     </div>
     {% endif %}
     <h1>{{ club.name }}</h1>
+    {% if club.full_name and club.full_name != club.name %}
+    <div class="team-head-fullname">{{ club.full_name }}</div>
+    {% endif %}
     {% if club.info.stadium %}
     <div class="team-head-stadium">🏟️ {{ club.info.stadium }}{% if club.info.capacity %} · {{ club.info.capacity }}{% endif %}</div>
     {% endif %}

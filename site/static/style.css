@@ -222,7 +222,7 @@ h1{font-size:1.7rem;margin:4px 0 20px}
 .latest-sub{font-size:.78rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center;gap:4px}
 .latest-sub .into{color:var(--text);font-weight:600}
 .latest-sub .arrow{color:var(--muted-dim)}
-.fee{font-size:.82rem;font-weight:800;white-space:nowrap;flex:0 0 auto}
+.fee{font-family:var(--font-display);font-size:.9rem;font-weight:800;white-space:nowrap;flex:0 0 auto;font-variant-numeric:tabular-nums}
 
 /* ---------- Club cards grid ---------- */
 .clubs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:18px}
@@ -265,7 +265,7 @@ h1{font-size:1.7rem;margin:4px 0 20px}
   font-family:var(--font-display);font-stretch:condensed;
   font-size:.68rem;color:rgba(255,255,255,.75);letter-spacing:.04em;text-transform:uppercase;font-weight:700;
 }
-.solde-val{font-weight:800;font-size:1.12rem;color:#fff}
+.solde-val{font-family:var(--font-display);font-weight:800;font-size:1.2rem;color:#fff;font-variant-numeric:tabular-nums}
 .solde-val.pos{color:#a8ffcf}
 .solde-val.neg{color:#ffc2c2}
 
@@ -302,6 +302,7 @@ h1{font-size:1.7rem;margin:4px 0 20px}
 .team-head-comp{display:flex;align-items:center;gap:8px;margin-bottom:8px;color:rgba(255,255,255,.85);font-size:.85rem;font-weight:600}
 .team-head-comp-logo{width:18px;height:18px;object-fit:contain}
 .team-head h1{margin:0;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.3);font-size:clamp(1.5rem,3vw,2.1rem)}
+.team-head-fullname{margin-top:3px;color:rgba(255,255,255,.6);font-size:.82rem}
 .team-head-stadium{margin-top:6px;color:rgba(255,255,255,.85);font-size:.86rem;font-weight:600}
 
 /* ---------- Palmarès ---------- */
@@ -366,11 +367,11 @@ h1{font-size:1.7rem;margin:4px 0 20px}
 .fx-opp-logo{width:18px;height:18px;object-fit:contain;flex:0 0 auto}
 a.fx-opp:hover span{text-decoration:underline}
 .fx-right{grid-area:right;text-align:right;font-variant-numeric:tabular-nums}
-.fx-score{font-size:.9rem;font-weight:800}
+.fx-score{font-family:var(--font-display);font-size:.98rem;font-weight:800;font-variant-numeric:tabular-nums}
 .fx-score.win{color:var(--pos-val)}
 .fx-score.loss{color:var(--neg-val)}
 .fx-score.draw{color:var(--muted)}
-.fx-time{font-size:.8rem;color:var(--muted);font-weight:600}
+.fx-time{font-family:var(--font-display);font-size:.86rem;color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
 
 /* ---------- Club's own standings history (équipe page) ---------- */
 .standings-history-section{margin-bottom:28px}
@@ -387,8 +388,8 @@ a.fx-opp:hover span{text-decoration:underline}
 .sh-row:first-child{border-top:none}
 .sh-season{font-family:var(--font-display);font-stretch:condensed;font-weight:800;font-size:.84rem}
 .sh-pos{font-weight:800;color:var(--muted);font-size:.86rem}
-.sh-bilan{font-size:.8rem;color:var(--muted)}
-.sh-pts{font-weight:800;text-align:right;font-size:.9rem}
+.sh-bilan{font-family:var(--font-display);font-size:.84rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.sh-pts{font-family:var(--font-display);font-weight:800;text-align:right;font-size:.98rem;font-variant-numeric:tabular-nums}
 
 /* ---------- Classement table (full + compact sidebar variant) ---------- */
 .season-pills{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 12px;margin-bottom:6px;-ms-overflow-style:none;scrollbar-width:none}
@@ -422,14 +423,14 @@ a.fx-opp:hover span{text-decoration:underline}
 }
 .cls-row:first-child{border-top:none}
 a.cls-row:hover{background:var(--panel2)}
-.cls-pos{font-weight:800;color:var(--muted)}
+.cls-pos{font-family:var(--font-display);font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
 .cls-club{display:flex;align-items:center;gap:9px;min-width:0;font-weight:700;text-align:left}
 .cls-club img{width:22px;height:22px;object-fit:contain;flex:0 0 auto}
 .cls-club span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cls-num{color:var(--muted);font-variant-numeric:tabular-nums}
+.cls-num{font-family:var(--font-display);color:var(--muted);font-variant-numeric:tabular-nums}
 .cls-gd.pos{color:var(--pos-val)}
 .cls-gd.neg{color:var(--neg-val)}
-.cls-pts{font-weight:900;font-size:.92rem}
+.cls-pts{font-family:var(--font-display);font-weight:800;font-size:1rem;font-variant-numeric:tabular-nums}
 .cls-legend{font-size:.74rem;color:var(--muted-dim);margin:10px 2px 0}
 
 /* compact variant, used on the calendrier sidebar */
@@ -479,8 +480,8 @@ a.cls-row:hover{background:var(--panel2)}
 .md-team span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 a.md-team:hover span{text-decoration:underline}
 .md-mid{display:flex;flex-direction:column;align-items:center;gap:2px;flex:0 0 auto}
-.md-score{font-weight:900;font-size:1.02rem;font-variant-numeric:tabular-nums}
-.md-time{font-size:.8rem;color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
+.md-score{font-family:var(--font-display);font-weight:800;font-size:1.1rem;font-variant-numeric:tabular-nums}
+.md-time{font-family:var(--font-display);font-size:.9rem;color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
 .md-extra{font-size:.6rem;color:var(--muted-dim);text-transform:uppercase;letter-spacing:.03em}
 
 /* ---------- Squad groups ---------- */
@@ -505,14 +506,15 @@ a.md-team:hover span{text-decoration:underline}
 .player-card:hover{transform:translateY(-2px);border-color:color-mix(in srgb, var(--grp-color) 50%, var(--border));background:var(--panel2)}
 .p-num{
   flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
-  color:var(--grp-color);font-weight:800;font-size:.82rem;
+  color:var(--grp-color);font-family:var(--font-display);font-weight:800;font-size:.88rem;
   background:color-mix(in srgb, var(--grp-color) 16%, var(--panel2));
   border:1px solid color-mix(in srgb, var(--grp-color) 35%, transparent);
+  font-variant-numeric:tabular-nums;
 }
 .p-main{flex:1;min-width:0}
 .p-name{font-size:.87rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .p-sub{font-size:.75rem;color:var(--muted);display:flex;align-items:center;gap:6px;margin-top:2px}
-.p-val{font-size:.82rem;font-weight:700;color:var(--muted);flex:0 0 auto}
+.p-val{font-family:var(--font-display);font-size:.88rem;font-weight:700;color:var(--muted);flex:0 0 auto;font-variant-numeric:tabular-nums}
 
 .footsrc{text-align:center;color:var(--muted-dim);font-size:.76rem;padding:26px 0}
 

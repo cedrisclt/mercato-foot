@@ -364,6 +364,8 @@ def get_fixtures(club, season, offline=False):
         venue_raw = tds[3].get_text(strip=True)
         opp_a = tds[6].find("a")
         opp_img = tds[5].find("img")
+        opp_id_m = re.search(r"/verein/(\d+)", opp_a["href"]) if opp_a and opp_a.get("href") else None
+        opp_id = int(opp_id_m.group(1)) if opp_id_m else None
         date_txt = tds[1].get_text(strip=True)
         dm = re.search(r"(\d{2})/(\d{2})/(\d{4})", date_txt)
         date_iso = f"{dm.group(3)}-{dm.group(2)}-{dm.group(1)}" if dm else ""
@@ -389,6 +391,7 @@ def get_fixtures(club, season, offline=False):
             "date": date_txt, "date_iso": date_iso, "time": tds[2].get_text(strip=True),
             "venue": {"D": "home", "E": "away"}.get(venue_raw, venue_raw),
             "opponent": opp_a.get_text(strip=True) if opp_a else tds[6].get_text(strip=True),
+            "opponent_id": opp_id,
             "opponent_logo": opp_img["src"] if opp_img else "",
             "score": score, "extra": extra, "result": result, "played": played,
         })
