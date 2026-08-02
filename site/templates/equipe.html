@@ -1,5 +1,26 @@
 {% extends "base.html" %}
 {% block title %}{{ club.name }} — Effectif {{ competition.season }}/{{ (competition.season + 1) % 100 }}{% endblock %}
+
+{% macro fixture_row(m) %}
+<div class="fx-row">
+  <span class="fx-date">{{ m.date }}</span>
+  <span class="fx-comp" title="{{ m.comp }}">{{ m.comp }}</span>
+  {% if m.opponent_code %}
+  <a class="fx-opp" href="{{ base }}/{{ competition.code }}/equipe/{{ m.opponent_code }}.html">
+  {% else %}
+  <span class="fx-opp">
+  {% endif %}
+    {% if m.opponent_logo %}<img src="{{ m.opponent_logo }}" alt="" class="fx-opp-logo" loading="lazy">{% endif %}
+    <span>{{ 'vs' if m.venue == 'home' else '@' }} {{ m.opponent }}</span>
+  {% if m.opponent_code %}</a>{% else %}</span>{% endif %}
+  {% if m.played %}
+  <span class="fx-right fx-score {{ m.result or '' }}">{{ m.score_display or m.score or '—' }}</span>
+  {% else %}
+  <span class="fx-right fx-time">{{ m.time if m.time and m.time != 'Inconnu' else '—' }}</span>
+  {% endif %}
+</div>
+{% endmacro %}
+
 {% block content %}
 <a class="back-link" href="{{ base }}/{{ competition.code }}/index.html">← Mercato {{ competition.name }}</a>
 
@@ -37,49 +58,133 @@
 </section>
 {% endif %}
 
-{% if club.fixtures.results or club.fixtures.upcoming %}
-<section class="fixtures-section">
+{% if club.standings_history %}
+<section class="standings-history-section">
+  <div class="section-head-row">
+    <h2>Classements par saison</h2>
+    <a class="sh-link" href="{{ base }}/{{ competition.code }}/classement.html">Voir le classement complet →</a>
+  </div>
+  <div class="sh-list">
+    {% for row in club.standings_history %}
+    <div class="sh-row" style="--zone: {{ row.zone_color or 'transparent' }}" data-reveal>
+      <span class="sh-season">{{ row.season_label }}</span>
+      <span class="sh-pos">{{ row.pos }}e</span>
+      <span class="sh-bilan">{{ row.played }}J &middot; {{ row.wins }}G {{ row.draws }}N {{ row.losses }}P &middot; {{ row.gf }}-{{ row.ga }}</span>
+      <span class="sh-pts">{{ row.pts }} pts</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if club.fixtures %}
+<section class="fixtures-section" data-base="{{ base }}" data-comp="{{ competition.code }}">
+  <div class="filter-bar">
+    <label>Saison
+      <select id="fx-season" class="select-ctl">
+        <option value="all">Toutes les saisons</option>
+        {% for s in club.fixtures_seasons %}
+        <option value="{{ s }}" {{ 'selected' if s == club.current_season else '' }}>{{ s }}/{{ "%02d"|format((s + 1) % 100) }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>Compétition
+      <select id="fx-comp" class="select-ctl">
+        <option value="">Toutes les compétitions</option>
+        {% for cmp in club.fixtures_comps %}
+        <option value="{{ cmp }}">{{ cmp }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  </div>
   <div class="fixtures-grid">
     <div class="fixture-col">
-      <h2>Résultats récents</h2>
-      {% if club.fixtures.results %}
-        {% for m in club.fixtures.results %}
-        <div class="fixture-row" data-reveal>
-          <div class="fixture-date">{{ m.date }}</div>
-          <div class="fixture-main">
-            <span class="fixture-comp">{{ m.comp }}</span>
-            <div class="fixture-opp">
-              {% if m.opponent_logo %}<img src="{{ m.opponent_logo }}" alt="" class="fixture-opp-logo" loading="lazy">{% endif %}
-              <span>{{ 'vs' if m.venue == 'home' else '@' }} {{ m.opponent }}</span>
-            </div>
-          </div>
-          <div class="fixture-score">{{ m.score }}</div>
-        </div>
-        {% endfor %}
-      {% else %}
-      <div class="empty">Aucun match joué pour l'instant</div>
-      {% endif %}
+      <h2>Résultats <span class="fx-count" id="fx-results-count"></span></h2>
+      <div id="fx-results">
+        {% set default_results = club.fixtures | selectattr('played') | selectattr('season', 'equalto', club.current_season) | list %}
+        {% if default_results %}
+          {% for m in default_results %}{{ fixture_row(m) }}{% endfor %}
+        {% else %}
+        <p class="empty">Aucun match joué pour cette sélection.</p>
+        {% endif %}
+      </div>
     </div>
     <div class="fixture-col">
-      <h2>Prochains matchs</h2>
-      {% if club.fixtures.upcoming %}
-        {% for m in club.fixtures.upcoming %}
-        <div class="fixture-row" data-reveal>
-          <div class="fixture-date">{{ m.date }}<span class="fixture-time">{{ m.time }}</span></div>
-          <div class="fixture-main">
-            <span class="fixture-comp">{{ m.comp }}</span>
-            <div class="fixture-opp">
-              {% if m.opponent_logo %}<img src="{{ m.opponent_logo }}" alt="" class="fixture-opp-logo" loading="lazy">{% endif %}
-              <span>{{ 'vs' if m.venue == 'home' else '@' }} {{ m.opponent }}</span>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      {% else %}
-      <div class="empty">Calendrier pas encore disponible</div>
-      {% endif %}
+      <h2>Prochains matchs <span class="fx-count" id="fx-upcoming-count"></span></h2>
+      <div id="fx-upcoming">
+        {% set default_upcoming = club.fixtures | rejectattr('played') | selectattr('season', 'equalto', club.current_season) | list | reverse | list %}
+        {% if default_upcoming %}
+          {% for m in default_upcoming %}{{ fixture_row(m) }}{% endfor %}
+        {% else %}
+        <p class="empty">Calendrier pas encore disponible.</p>
+        {% endif %}
+      </div>
     </div>
   </div>
+
+  <script id="fixtures-data" type="application/json">{{ club.fixtures | tojson }}</script>
+  <script>
+  (function () {
+    "use strict";
+    var section = document.querySelector(".fixtures-section");
+    var dataEl = document.getElementById("fixtures-data");
+    if (!section || !dataEl) return;
+    var fixtures;
+    try { fixtures = JSON.parse(dataEl.textContent); } catch (e) { return; }
+
+    var BASE = section.getAttribute("data-base") || "";
+    var COMP = section.getAttribute("data-comp") || "";
+    var seasonSel = document.getElementById("fx-season");
+    var compSel = document.getElementById("fx-comp");
+    var resultsEl = document.getElementById("fx-results");
+    var upcomingEl = document.getElementById("fx-upcoming");
+    var resultsCount = document.getElementById("fx-results-count");
+    var upcomingCount = document.getElementById("fx-upcoming-count");
+    if (!seasonSel || !compSel || !resultsEl || !upcomingEl) return;
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    function rowHtml(m) {
+      var oppTag = m.opponent_code ? "a" : "span";
+      var hrefAttr = m.opponent_code ? ' href="' + BASE + "/" + COMP + "/equipe/" + esc(m.opponent_code) + '.html"' : "";
+      var logo = m.opponent_logo ? '<img src="' + esc(m.opponent_logo) + '" alt="" class="fx-opp-logo" loading="lazy">' : "";
+      var oppHtml = "<" + oppTag + ' class="fx-opp"' + hrefAttr + ">" + logo +
+        "<span>" + (m.venue === "home" ? "vs" : "@") + " " + esc(m.opponent) + "</span></" + oppTag + ">";
+      var right = m.played
+        ? '<span class="fx-right fx-score ' + esc(m.result || "") + '">' + esc(m.score_display || m.score || "—") + "</span>"
+        : '<span class="fx-right fx-time">' + (m.time && m.time !== "Inconnu" ? esc(m.time) : "—") + "</span>";
+      return '<div class="fx-row">' +
+        '<span class="fx-date">' + esc(m.date) + "</span>" +
+        '<span class="fx-comp" title="' + esc(m.comp) + '">' + esc(m.comp) + "</span>" +
+        oppHtml + right +
+        "</div>";
+    }
+
+    function render() {
+      var season = seasonSel.value;
+      var comp = compSel.value;
+      var filtered = fixtures.filter(function (m) {
+        if (season !== "all" && String(m.season) !== season) return false;
+        if (comp && m.comp !== comp) return false;
+        return true;
+      });
+      var results = filtered.filter(function (m) { return m.played; });
+      var upcoming = filtered.filter(function (m) { return !m.played; }).slice().reverse();
+      resultsEl.innerHTML = results.length ? results.map(rowHtml).join("") : '<p class="empty">Aucun match joué pour cette sélection.</p>';
+      upcomingEl.innerHTML = upcoming.length ? upcoming.map(rowHtml).join("") : '<p class="empty">Aucun match à venir pour cette sélection.</p>';
+      if (resultsCount) resultsCount.textContent = results.length ? "(" + results.length + ")" : "";
+      if (upcomingCount) upcomingCount.textContent = upcoming.length ? "(" + upcoming.length + ")" : "";
+    }
+
+    seasonSel.addEventListener("change", render);
+    compSel.addEventListener("change", render);
+    render();
+  })();
+  </script>
 </section>
 {% endif %}
 

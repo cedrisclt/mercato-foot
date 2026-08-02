@@ -22,6 +22,9 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
 os.makedirs(DATA, exist_ok=True)
 
+HISTORY_SEASONS = 10  # backfilled once, then only SEASON itself is re-scraped
+SEASON_RANGE = list(range(SEASON - HISTORY_SEASONS + 1, SEASON + 1))
+
 
 def state_path(code):
     return os.path.join(DATA, f"{code}.json")
@@ -39,6 +42,42 @@ def load_state(code):
 
 def key(club_code, direction, t):
     return f"{club_code}|{direction}|{t['p']}|{t['club']}"
+
+
+def get_club_fixtures(club, old_fixtures, offline):
+    """Backfill whichever of the last HISTORY_SEASONS aren't already stored
+    (the first time a club is seen, that's all of them), and always
+    re-scrape the current SEASON since it's the only one still changing.
+    Seasons older than the window are left untouched once fetched, so the
+    archive only grows over time instead of being re-fetched or pruned."""
+    if not isinstance(old_fixtures, list):
+        old_fixtures = []  # migrate from the old {"results","upcoming"} shape
+    old_seasons = {m["season"] for m in old_fixtures}
+    missing = [s for s in SEASON_RANGE if s not in old_seasons or s == SEASON]
+    if len(missing) > 1:
+        print(f"    ↻ backfill {len(missing)} saisons ({missing[0]}-{missing[-1]})")
+    kept = [m for m in old_fixtures if m["season"] not in missing]
+    fetched = []
+    for s in missing:
+        fetched.extend(tm.get_fixtures(club, s, offline))
+        if not offline:
+            time.sleep(1.0)
+    return kept + fetched
+
+
+def get_competition_standings(comp, old_standings, offline):
+    """Same incremental-backfill strategy as get_club_fixtures, but per
+    competition (one table per season, not per club) — far cheaper."""
+    old_seasons = {int(s) for s in old_standings.keys()}
+    missing = [s for s in SEASON_RANGE if s not in old_seasons or s == SEASON]
+    if len(missing) > 1:
+        print(f"  ↻ backfill classements {len(missing)} saisons ({missing[0]}-{missing[-1]})")
+    out = {str(s): v for s, v in old_standings.items() if int(s) not in missing}
+    for s in missing:
+        out[str(s)] = tm.get_standings(comp, s, offline)
+        if not offline:
+            time.sleep(1.0)
+    return out
 
 
 def scrape_competition(comp, offline=False, squads_only=False):
@@ -60,7 +99,8 @@ def scrape_competition(comp, offline=False, squads_only=False):
         squad = tm.get_squad(c, SEASON, offline)
         info = tm.get_club_info(c, offline)
         honours = tm.get_honours(c, offline)
-        fixtures = tm.get_fixtures(c, SEASON, offline)
+        old_fixtures = old_clubs_by_code.get(c["code"], {}).get("fixtures", [])
+        fixtures = get_club_fixtures(c, old_fixtures, offline)
         entry = {"code": c["code"], "name": c["name"], "slug": c["slug"],
                  "id": c["id"], "logo_url": c["logo_url"], "accent": accent,
                  "squad": squad, "info": info, "honours": honours,
@@ -81,6 +121,9 @@ def scrape_competition(comp, offline=False, squads_only=False):
         club_ids = {c["id"]: c["code"] for c in clubs}
         latest = tm.get_latest_transfers(comp, club_ids, offline)
 
+    print("· classements …")
+    standings = get_competition_standings(comp, old.get("standings", {}), offline)
+
     today = date.today().isoformat()
     seen = {}
     for c in clubs_out:
@@ -98,6 +141,7 @@ def scrape_competition(comp, offline=False, squads_only=False):
         "code": comp["code"], "name": comp["name"], "season": SEASON,
         "updated": datetime.now().isoformat(timespec="seconds"),
         "clubs": clubs_out, "latest": latest[:10], "seen": seen,
+        "standings": standings,
     }
     json.dump(out, open(state_path(comp["code"]), "w", encoding="utf-8"),
                ensure_ascii=False, indent=1)

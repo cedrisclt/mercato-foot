@@ -332,14 +332,15 @@ def get_honours(club, offline=False):
 
 
 def get_fixtures(club, season, offline=False):
-    """-> {"results": [...], "upcoming": [...]} for the full season schedule
-       (all competitions), each match: comp/matchday/date/time/venue/
-       opponent/opponent_logo/score/played."""
+    """-> flat list of every match for one season, all competitions combined.
+       Each: season/comp/matchday/date/date_iso/time/venue/opponent/
+       opponent_logo/score/extra/result('win'/'draw'/'loss'/None)/played."""
     url = (f"https://www.transfermarkt.fr/{club['slug']}/spielplandatum/verein/"
            f"{club['id']}/saison_id/{season}")
-    raw = fetch_url(f"spielplan_{club['id']}.html", url, offline, club["name"] + " calendrier")
+    raw = fetch_url(f"spielplan_{club['id']}_{season}.html", url, offline,
+                     f"{club['name']} calendrier {season}")
     if not raw:
-        return {"results": [], "upcoming": []}
+        return []
     soup = BeautifulSoup(raw, "lxml")
     table = None
     for t in soup.find_all("table"):
@@ -348,7 +349,7 @@ def get_fixtures(club, season, offline=False):
             table = t
             break
     if not table:
-        return {"results": [], "upcoming": []}
+        return []
 
     current_comp = ""
     matches = []
@@ -363,19 +364,77 @@ def get_fixtures(club, season, offline=False):
         venue_raw = tds[3].get_text(strip=True)
         opp_a = tds[6].find("a")
         opp_img = tds[5].find("img")
-        score = tds[9].get_text(strip=True)
-        played = bool(score) and score not in ("-:-", "?:?", "")
+        date_txt = tds[1].get_text(strip=True)
+        dm = re.search(r"(\d{2})/(\d{2})/(\d{4})", date_txt)
+        date_iso = f"{dm.group(3)}-{dm.group(2)}-{dm.group(1)}" if dm else ""
+
+        score, extra, result, played = "", "", None, False
+        link = tds[9].select_one("a.ergebnis-link")
+        if link:
+            span = link.select_one("span")
+            if span:
+                zusatz = span.select_one(".ergebnis_zusatz")
+                if zusatz:
+                    extra = zusatz.get_text(strip=True)
+                    zusatz.extract()
+                score = span.get_text(strip=True)
+                cls = span.get("class") or []
+                result = "win" if "greentext" in cls else ("loss" if "redtext" in cls else "draw")
+                played = bool(score) and score not in ("-:-", "?:?")
+                if not played:
+                    score, result = "", None
+
         matches.append({
-            "comp": current_comp, "matchday": tds[0].get_text(strip=True),
-            "date": tds[1].get_text(strip=True), "time": tds[2].get_text(strip=True),
+            "season": season, "comp": current_comp, "matchday": tds[0].get_text(strip=True),
+            "date": date_txt, "date_iso": date_iso, "time": tds[2].get_text(strip=True),
             "venue": {"D": "home", "E": "away"}.get(venue_raw, venue_raw),
             "opponent": opp_a.get_text(strip=True) if opp_a else tds[6].get_text(strip=True),
             "opponent_logo": opp_img["src"] if opp_img else "",
-            "score": score if played else "", "played": played,
+            "score": score, "extra": extra, "result": result, "played": played,
         })
-    results = [m for m in matches if m["played"]]
-    upcoming = [m for m in matches if not m["played"]]
-    return {"results": list(reversed(results))[:8], "upcoming": upcoming[:8]}
+    return matches
+
+
+def get_standings(competition, season, offline=False):
+    """-> [{"pos","club_name","club_id","logo_url","played","wins","draws",
+            "losses","gf","ga","gd","pts","zone_color"}], ranked order."""
+    url = (f"https://www.transfermarkt.fr/{competition['slug']}/tabelle/wettbewerb/"
+           f"{competition['code']}/saison_id/{season}")
+    raw = fetch_url(f"standings_{competition['code']}_{season}.html", url, offline,
+                     f"classement {competition['name']} {season}")
+    if not raw:
+        return []
+    soup = BeautifulSoup(raw, "lxml")
+    t = soup.select_one("table.items")
+    rows = []
+    for tr in (t.select("tbody > tr") if t else []):
+        tds = tr.find_all("td", recursive=False)
+        if len(tds) < 10:
+            continue
+        pos_txt = tds[0].get_text(strip=True)
+        m = re.match(r"\d+", pos_txt)
+        if not m:
+            continue
+        name_a = tds[2].find("a")
+        club_id_m = re.search(r"/verein/(\d+)", name_a["href"]) if name_a else None
+        img = tds[1].find("img")
+        gfa = tds[7].get_text(strip=True)
+        gf, ga = (gfa.split(":") + ["0", "0"])[:2] if ":" in gfa else ("0", "0")
+        rows.append({
+            "pos": int(m.group()), "zone_color": (tds[0].get("style") or "").
+                replace("background-color:", "").replace(";", "").strip(),
+            "club_name": (name_a.get("title") or name_a.get_text(strip=True)) if name_a else "",
+            "club_id": int(club_id_m.group(1)) if club_id_m else None,
+            "logo_url": img["src"] if img else "",
+            "played": int(tds[3].get_text(strip=True) or 0),
+            "wins": int(tds[4].get_text(strip=True) or 0),
+            "draws": int(tds[5].get_text(strip=True) or 0),
+            "losses": int(tds[6].get_text(strip=True) or 0),
+            "gf": int(gf or 0), "ga": int(ga or 0),
+            "gd": int(tds[8].get_text(strip=True).replace("+", "") or 0),
+            "pts": int(tds[9].get_text(strip=True) or 0),
+        })
+    return rows
 
 
 def get_latest_transfers(competition, club_ids, offline=False):

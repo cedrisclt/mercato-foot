@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block title %}Calendrier {{ competition.name }}{% endblock %}
+{% block content %}
+<nav class="comp-subnav">
+  <a href="{{ base }}/{{ competition.code }}/index.html">Mercato</a>
+  <a href="{{ base }}/{{ competition.code }}/calendrier.html" class="active">Calendrier</a>
+  <a href="{{ base }}/{{ competition.code }}/classement.html">Classement</a>
+</nav>
+
+<h1>Calendrier <span class="season">{{ matchday.league_comp_name or competition.name }}</span></h1>
+
+{% if matchday.matchday_order %}
+{% set ns = namespace(current_md=None) %}
+{% for md in matchday.matchday_order %}
+  {% if ns.current_md is none and (matchday.matchdays[md] | rejectattr('played') | list | length) > 0 %}
+    {% set ns.current_md = md %}
+  {% endif %}
+{% endfor %}
+{% if ns.current_md is none %}
+  {% set ns.current_md = matchday.matchday_order[-1] %}
+{% endif %}
+
+<div class="cal-layout">
+  <div class="cal-main">
+    <div class="md-switcher">
+      <button type="button" class="md-nav-btn" id="md-prev" aria-label="Journée précédente">&#8249;</button>
+      <div class="md-select-wrap">
+        <label class="md-label" for="md-select">Journée</label>
+        <select id="md-select" class="select-ctl">
+          {% for md in matchday.matchday_order %}
+          <option value="{{ md }}" {{ 'selected' if md == ns.current_md else '' }}>Journée {{ md }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <button type="button" class="md-nav-btn" id="md-next" aria-label="Journée suivante">&#8250;</button>
+    </div>
+
+    {% for md in matchday.matchday_order %}
+    <div class="matchday-panel {{ 'active' if md == ns.current_md else '' }}" data-md="{{ md }}">
+      {% for date_iso, matches in matchday.matchdays[md] | groupby('date_iso') %}
+      <div class="md-day">
+        <div class="md-day-head">{{ matches[0].date }}</div>
+        {% for m in matches %}
+        <div class="md-match" data-reveal>
+          {% if m.home_code %}
+          <a class="md-team home" href="{{ base }}/{{ competition.code }}/equipe/{{ m.home_code }}.html">
+            <span>{{ m.home_name }}</span>
+            {% if m.home_logo %}<img src="{{ m.home_logo }}" alt="" loading="lazy">{% endif %}
+          </a>
+          {% else %}
+          <span class="md-team home">
+            <span>{{ m.home_name }}</span>
+            {% if m.home_logo %}<img src="{{ m.home_logo }}" alt="" loading="lazy">{% endif %}
+          </span>
+          {% endif %}
+
+          <div class="md-mid">
+            {% if m.played %}
+            <span class="md-score">{{ m.score }}</span>
+            {% if m.extra %}<span class="md-extra">{{ m.extra }}</span>{% endif %}
+            {% else %}
+            <span class="md-time">{{ m.time if m.time and m.time != 'Inconnu' else '—' }}</span>
+            {% endif %}
+          </div>
+
+          {% if m.away_code %}
+          <a class="md-team away" href="{{ base }}/{{ competition.code }}/equipe/{{ m.away_code }}.html">
+            {% if m.away_logo %}<img src="{{ m.away_logo }}" alt="" loading="lazy">{% endif %}
+            <span>{{ m.away_name }}</span>
+          </a>
+          {% else %}
+          <span class="md-team away">
+            {% if m.away_logo %}<img src="{{ m.away_logo }}" alt="" loading="lazy">{% endif %}
+            <span>{{ m.away_name }}</span>
+          </span>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <aside class="cal-side">
+    <div class="cal-side-head">
+      <h2>Classement</h2>
+      <a class="cal-side-link" href="{{ base }}/{{ competition.code }}/classement.html">Voir le classement complet →</a>
+    </div>
+    {% if standings %}
+    <div class="cls-table compact" role="table" aria-label="Classement">
+      <div class="cls-head-row compact" role="row">
+        <span role="columnheader">#</span>
+        <span role="columnheader">Club</span>
+        <span role="columnheader">Pts</span>
+        <span role="columnheader">J</span>
+        <span role="columnheader">G-N-P</span>
+      </div>
+      {% for row in standings %}
+      {% set tag = 'a' if row.code else 'div' %}
+      <{{ tag }} class="cls-row compact" role="row" style="--zone: {{ row.zone_color or 'transparent' }}"{% if row.code %} href="{{ base }}/{{ competition.code }}/equipe/{{ row.code }}.html"{% endif %}>
+        <span class="cls-pos" role="cell">{{ row.pos }}</span>
+        <span class="cls-club" role="cell">
+          {% if row.logo_url %}<img src="{{ row.logo_url }}" alt="" loading="lazy">{% endif %}
+          <span>{{ row.club_name }}</span>
+        </span>
+        <span class="cls-pts" role="cell">{{ row.pts }}</span>
+        <span class="cls-num" role="cell">{{ row.played }}</span>
+        <span class="cls-num" role="cell">{{ row.wins }}-{{ row.draws }}-{{ row.losses }}</span>
+      </{{ tag }}>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty">Classement indisponible.</p>
+    {% endif %}
+  </aside>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var panels = Array.prototype.slice.call(document.querySelectorAll(".matchday-panel"));
+  if (!panels.length) return;
+  var select = document.getElementById("md-select");
+  var prevBtn = document.getElementById("md-prev");
+  var nextBtn = document.getElementById("md-next");
+  var idx = panels.findIndex(function (p) { return p.classList.contains("active"); });
+  if (idx < 0) idx = panels.length - 1;
+
+  function render() {
+    panels.forEach(function (p, i) { p.classList.toggle("active", i === idx); });
+    if (select) select.value = panels[idx].getAttribute("data-md");
+    if (prevBtn) prevBtn.disabled = idx === 0;
+    if (nextBtn) nextBtn.disabled = idx === panels.length - 1;
+  }
+
+  if (prevBtn) prevBtn.addEventListener("click", function () { if (idx > 0) { idx--; render(); } });
+  if (nextBtn) nextBtn.addEventListener("click", function () { if (idx < panels.length - 1) { idx++; render(); } });
+  if (select) select.addEventListener("change", function () {
+    var i = panels.findIndex(function (p) { return p.getAttribute("data-md") === select.value; });
+    if (i >= 0) { idx = i; render(); }
+  });
+  render();
+})();
+</script>
+{% else %}
+<p class="empty">Calendrier indisponible pour cette compétition.</p>
+{% endif %}
+{% endblock %}
