@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Mercato {{ competition.name }} · {{ competition.season }}/{{ competition.season + 1 - 2000 }}{% endblock %}
+{% block content %}
+
+<section class="comp-hero" style="--hero-color: {{ competition.color }}">
+  <div class="comp-hero-bg" aria-hidden="true">
+    {% if competition.logo_url %}<img src="{{ competition.logo_url }}" alt="" class="comp-hero-ghost">{% endif %}
+  </div>
+  <div class="comp-hero-inner">
+    {% if competition.logo_url %}
+    <div class="comp-hero-crest-wrap"><img src="{{ competition.logo_url }}" alt="{{ competition.name }}" class="comp-hero-crest"></div>
+    {% endif %}
+    <div class="comp-hero-text">
+      <div class="comp-hero-eyebrow">Mercato · {{ competition.season }}/{{ (competition.season + 1) % 100 }}</div>
+      <h1>{{ competition.name }}</h1>
+      <div class="comp-hero-meta">{{ clubs|length }} clubs suivis &middot; mis à jour le {{ competition.updated_fmt }}</div>
+    </div>
+  </div>
+</section>
+
+{% if latest %}
+<section class="latest">
+  <h2>Dernières arrivées <small>(du + récent au + ancien)</small></h2>
+  <div class="latest-row">
+    {% for t in latest %}
+    <div class="latest-card" style="--accent: {{ t.dest_accent or '#3b4252' }}" data-reveal>
+      <div class="latest-crest-wrap">
+        {% if t.dest_logo_url %}<img src="{{ t.dest_logo_url }}" alt="" class="latest-crest" loading="lazy">{% else %}<span class="latest-crest-fallback">{{ t.club_code }}</span>{% endif %}
+      </div>
+      <div class="latest-main">
+        <span class="badge pos">{{ t.pos }}</span>
+        <div class="latest-name">{{ t.p }} <span class="age">{{ t.age }} ans</span></div>
+        <div class="latest-sub">{{ t.club }} <span class="arrow" aria-hidden="true">→</span> <span class="into">{{ t.dest_name or t.club_code }}</span></div>
+      </div>
+      <div class="fee">{{ t.fee_fmt }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="clubs-grid">
+  {% for c in clubs %}
+  <article class="club-card" style="--accent: {{ c.accent }}" data-reveal>
+    <a class="club-head" href="/{{ competition.code }}/equipe/{{ c.code }}.html">
+      <span class="club-head-shine" aria-hidden="true"></span>
+      <span class="crest-wrap"><img class="crest" src="{{ c.logo_url }}" alt="{{ c.name }}" loading="lazy"></span>
+      <span class="club-id">
+        <span class="club-name">{{ c.name }}</span>
+        <span class="squad-link">Effectif &amp; compo <span aria-hidden="true">→</span></span>
+      </span>
+      <span class="solde">
+        <span class="solde-label">Solde</span>
+        <span class="solde-val {{ 'pos' if c.solde >= 0 else 'neg' }}">{{ c.solde_fmt }}</span>
+      </span>
+    </a>
+
+    <div class="club-body">
+      <div class="side side-arr">
+        <div class="side-head"><span class="side-icon" aria-hidden="true">↓</span>Arrivées <span class="side-count">{{ c.arr|length }} &middot; {{ c.arr_total_fmt }}</span></div>
+        {% if c.arr %}
+          {% for t in c.arr %}
+          <div class="tr-row">
+            <span class="badge pos">{{ t.pos }}</span>
+            <div class="tr-main">
+              <div class="tr-name">{{ t.p }}<span class="age">{{ t.age }} ans</span></div>
+              <div class="tr-club">← {{ t.club }}</div>
+            </div>
+            <div class="fee">{{ t.fee_fmt }}</div>
+          </div>
+          {% endfor %}
+        {% else %}
+        <div class="empty">Aucune arrivée (hors prêts terminés / promus B)</div>
+        {% endif %}
+      </div>
+
+      <div class="side side-dep">
+        <div class="side-head"><span class="side-icon" aria-hidden="true">↑</span>Départs <span class="side-count">{{ c.dep|length }} &middot; {{ c.dep_total_fmt }}</span></div>
+        {% if c.dep %}
+          {% for t in c.dep %}
+          <div class="tr-row">
+            <span class="badge pos">{{ t.pos }}</span>
+            <div class="tr-main">
+              <div class="tr-name">{{ t.p }}<span class="age">{{ t.age }} ans</span></div>
+              <div class="tr-club">→ {{ t.club }}</div>
+            </div>
+            <div class="fee">{{ t.fee_fmt }}</div>
+          </div>
+          {% endfor %}
+        {% else %}
+        <div class="empty">Aucun départ</div>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}

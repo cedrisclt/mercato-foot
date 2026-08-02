@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}{{ club.name }} — Effectif {{ competition.season }}/{{ (competition.season + 1) % 100 }}{% endblock %}
+{% block content %}
+<a class="back-link" href="/{{ competition.code }}/index.html">← Mercato {{ competition.name }}</a>
+
+<div class="team-head" style="--accent: {{ club.accent }}">
+  <div class="team-head-shine" aria-hidden="true"></div>
+  <span class="crest-wrap big"><img class="crest big" src="{{ club.logo_url }}" alt="{{ club.name }}"></span>
+  <div class="team-head-text">
+    {% if competition.logo_url %}
+    <div class="team-head-comp">
+      <img src="{{ competition.logo_url }}" alt="" class="team-head-comp-logo">
+      <span>{{ competition.name }} &middot; {{ competition.season }}/{{ (competition.season + 1) % 100 }}</span>
+    </div>
+    {% endif %}
+    <h1>{{ club.name }}</h1>
+  </div>
+</div>
+
+{% for grp_code, grp_label, grp_icon in [("GK","Gardiens","🧤"), ("DEF","Défenseurs","🛡️"), ("MID","Milieux","🎯"), ("ATT","Attaquants","⚡")] %}
+{% set players = squad_by_group.get(grp_code, []) %}
+{% if players %}
+<section class="squad-group" data-grp="{{ grp_code }}">
+  <h2><span class="grp-icon" aria-hidden="true">{{ grp_icon }}</span>{{ grp_label }} <span>({{ players|length }})</span></h2>
+  <div class="player-grid">
+    {% for p in players %}
+    <div class="player-card" data-reveal>
+      <div class="p-num">{{ p.n or "—" }}</div>
+      <div class="p-main">
+        <div class="p-name">{{ p.p }}</div>
+        <div class="p-sub"><span class="badge pos">{{ p.pos }}</span> {{ p.age }} ans</div>
+      </div>
+      <div class="p-val">{{ p.val_fmt }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+{% endblock %}
