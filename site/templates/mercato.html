@@ -24,6 +24,35 @@
   <a href="{{ base }}/{{ competition.code }}/classement.html">Classement</a>
 </nav>
 
+{% if clubs %}
+<div class="club-jump">
+  <input type="search" id="club-search" class="select-ctl club-search-input" placeholder="Chercher un club…" aria-label="Chercher un club parmi les {{ clubs|length }} suivis">
+  <div class="club-jump-chips" id="club-jump-chips">
+    {% for c in clubs %}
+    <a href="#club-{{ c.code }}" class="club-chip" data-name="{{ c.name|lower }}">
+      <img src="{{ c.logo_url }}" alt="" width="18" height="18" loading="lazy">
+      <span>{{ c.name }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+<script>
+(function () {
+  "use strict";
+  var input = document.getElementById("club-search");
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".club-chip"));
+  if (!input || !chips.length) return;
+  input.addEventListener("input", function () {
+    var q = input.value.trim().toLowerCase();
+    chips.forEach(function (chip) {
+      var match = !q || chip.getAttribute("data-name").indexOf(q) !== -1;
+      chip.style.display = match ? "" : "none";
+    });
+  });
+})();
+</script>
+{% endif %}
+
 {% if latest %}
 <section class="latest">
   <h2>Dernières arrivées <small>(du + récent au + ancien)</small></h2>
@@ -47,7 +76,7 @@
 
 <section class="clubs-grid">
   {% for c in clubs %}
-  <article class="club-card" style="--accent: {{ c.accent }}" data-reveal>
+  <article class="club-card" id="club-{{ c.code }}" style="--accent: {{ c.accent }}" data-reveal>
     <a class="club-head" href="{{ base }}/{{ competition.code }}/equipe/{{ c.code }}.html">
       <span class="club-head-shine" aria-hidden="true"></span>
       <span class="crest-wrap"><img class="crest" src="{{ c.logo_url }}" alt="{{ c.name }}" loading="lazy"></span>

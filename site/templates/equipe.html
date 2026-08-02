@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block title %}{{ club.name }} — Effectif {{ competition.season }}/{{ (competition.season + 1) % 100 }}{% endblock %}
 
-{% macro fixture_row(m) %}
-<div class="fx-row">
+{% macro fixture_row(m, is_next=False) %}
+<div class="fx-row {{ 'fx-next' if is_next else '' }}">
+  {% if is_next %}<span class="fx-next-badge">Prochain match</span>{% endif %}
   <span class="fx-date">{{ m.date }}</span>
   <span class="fx-comp" title="{{ m.comp }}">{{ m.comp }}</span>
   {% if m.opponent_code %}
@@ -10,7 +11,7 @@
   {% else %}
   <span class="fx-opp">
   {% endif %}
-    {% if m.opponent_logo %}<img src="{{ m.opponent_logo }}" alt="" class="fx-opp-logo" loading="lazy">{% endif %}
+    {% if m.opponent_logo %}<img src="{{ m.opponent_logo }}" alt="" class="fx-opp-logo" width="18" height="18" loading="lazy">{% endif %}
     <span>{{ 'vs' if m.venue == 'home' else '@' }} {{ m.opponent }}</span>
   {% if m.opponent_code %}</a>{% else %}</span>{% endif %}
   {% if m.played %}
@@ -24,13 +25,19 @@
 {% block content %}
 <a class="back-link" href="{{ base }}/{{ competition.code }}/index.html">← Mercato {{ competition.name }}</a>
 
+<nav class="comp-subnav">
+  <a href="{{ base }}/{{ competition.code }}/index.html">Mercato</a>
+  <a href="{{ base }}/{{ competition.code }}/calendrier.html">Calendrier</a>
+  <a href="{{ base }}/{{ competition.code }}/classement.html">Classement</a>
+</nav>
+
 <div class="team-head" style="--accent: {{ club.accent }}">
   <div class="team-head-shine" aria-hidden="true"></div>
   <span class="crest-wrap big"><img class="crest big" src="{{ club.logo_url }}" alt="{{ club.name }}"></span>
   <div class="team-head-text">
     {% if competition.logo_url %}
     <div class="team-head-comp">
-      <img src="{{ competition.logo_url }}" alt="" class="team-head-comp-logo">
+      <img src="{{ competition.logo_url }}" alt="" class="team-head-comp-logo" width="18" height="18">
       <span>{{ competition.name }} &middot; {{ competition.season }}/{{ (competition.season + 1) % 100 }}</span>
     </div>
     {% endif %}
@@ -44,44 +51,15 @@
   </div>
 </div>
 
-{% if club.honours %}
-<section class="honours-section" data-reveal>
-  <h2>Palmarès</h2>
-  <div class="honours-grid">
-    {% for h in club.honours %}
-    <div class="honour-card">
-      {% if h.logo_url %}<img class="honour-logo" src="{{ h.logo_url }}" alt="" loading="lazy">{% endif %}
-      <div class="honour-main">
-        <div class="honour-title"><span class="honour-count">{{ h.count }}×</span> {{ h.title }}</div>
-        <div class="honour-seasons">{{ h.seasons[:6]|join(', ') }}{% if h.seasons|length > 6 %} …{% endif %}</div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
-
-{% if club.standings_history %}
-<section class="standings-history-section">
-  <div class="section-head-row">
-    <h2>Classements par saison</h2>
-    <a class="sh-link" href="{{ base }}/{{ competition.code }}/classement.html">Voir le classement complet →</a>
-  </div>
-  <div class="sh-list">
-    {% for row in club.standings_history %}
-    <div class="sh-row" style="--zone: {{ row.zone_color or 'transparent' }}" data-reveal>
-      <span class="sh-season">{{ row.season_label }}</span>
-      <span class="sh-pos">{{ row.pos }}e</span>
-      <span class="sh-bilan">{{ row.played }}J &middot; {{ row.wins }}G {{ row.draws }}N {{ row.losses }}P &middot; {{ row.gf }}-{{ row.ga }}</span>
-      <span class="sh-pts">{{ row.pts }} pts</span>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
+<nav class="page-jump">
+  {% if club.fixtures %}<a href="#calendrier">Calendrier &amp; résultats</a>{% endif %}
+  <a href="#effectif">Effectif</a>
+  {% if club.honours %}<a href="#palmares">Palmarès</a>{% endif %}
+  {% if club.standings_history %}<a href="#historique">Historique</a>{% endif %}
+</nav>
 
 {% if club.fixtures %}
-<section class="fixtures-section" data-base="{{ base }}" data-comp="{{ competition.code }}">
+<section class="fixtures-section" id="calendrier" data-base="{{ base }}" data-comp="{{ competition.code }}" data-fixtures-full="{{ base }}/{{ club.fixtures_full_url }}">
   <div class="filter-bar">
     <label>Saison
       <select id="fx-season" class="select-ctl">
@@ -117,7 +95,7 @@
       <div id="fx-upcoming">
         {% set default_upcoming = club.fixtures | rejectattr('played') | selectattr('season', 'equalto', club.current_season) | list | reverse | list %}
         {% if default_upcoming %}
-          {% for m in default_upcoming %}{{ fixture_row(m) }}{% endfor %}
+          {% for m in default_upcoming %}{{ fixture_row(m, loop.first) }}{% endfor %}
         {% else %}
         <p class="empty">Calendrier pas encore disponible.</p>
         {% endif %}
@@ -137,6 +115,7 @@
 
     var BASE = section.getAttribute("data-base") || "";
     var COMP = section.getAttribute("data-comp") || "";
+    var FULL_URL = section.getAttribute("data-fixtures-full") || "";
     var seasonSel = document.getElementById("fx-season");
     var compSel = document.getElementById("fx-comp");
     var resultsEl = document.getElementById("fx-results");
@@ -145,22 +124,46 @@
     var upcomingCount = document.getElementById("fx-upcoming-count");
     if (!seasonSel || !compSel || !resultsEl || !upcomingEl) return;
 
+    // Only the 2 most recent seasons ship inline; older ones (still listed
+    // in the season <select>) are fetched from a small per-club JSON file
+    // the first time they're actually requested, and cached in memory.
+    var fullyLoaded = false;
+    var loadPromise = null;
+    function ensureSeasonLoaded(season) {
+      if (fullyLoaded || !FULL_URL) return Promise.resolve();
+      if (season !== "all" && fixtures.some(function (m) { return String(m.season) === String(season); })) {
+        return Promise.resolve();
+      }
+      if (loadPromise) return loadPromise;
+      loadPromise = fetch(FULL_URL).then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      }).then(function (data) {
+        fixtures = data;
+        fullyLoaded = true;
+      }).catch(function () {
+        loadPromise = null; // allow retrying on the next filter change
+      });
+      return loadPromise;
+    }
+
     function esc(s) {
       return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
         return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
       });
     }
 
-    function rowHtml(m) {
+    function rowHtml(m, isNext) {
       var oppTag = m.opponent_code ? "a" : "span";
       var hrefAttr = m.opponent_code ? ' href="' + BASE + "/" + COMP + "/equipe/" + esc(m.opponent_code) + '.html"' : "";
-      var logo = m.opponent_logo ? '<img src="' + esc(m.opponent_logo) + '" alt="" class="fx-opp-logo" loading="lazy">' : "";
+      var logo = m.opponent_logo ? '<img src="' + esc(m.opponent_logo) + '" alt="" class="fx-opp-logo" width="18" height="18" loading="lazy">' : "";
       var oppHtml = "<" + oppTag + ' class="fx-opp"' + hrefAttr + ">" + logo +
         "<span>" + (m.venue === "home" ? "vs" : "@") + " " + esc(m.opponent) + "</span></" + oppTag + ">";
       var right = m.played
         ? '<span class="fx-right fx-score ' + esc(m.result || "") + '">' + esc(m.score_display || m.score || "—") + "</span>"
         : '<span class="fx-right fx-time">' + (m.time && m.time !== "Inconnu" ? esc(m.time) : "—") + "</span>";
-      return '<div class="fx-row">' +
+      var badge = isNext ? '<span class="fx-next-badge">Prochain match</span>' : "";
+      return '<div class="fx-row' + (isNext ? " fx-next" : "") + '">' + badge +
         '<span class="fx-date">' + esc(m.date) + "</span>" +
         '<span class="fx-comp" title="' + esc(m.comp) + '">' + esc(m.comp) + "</span>" +
         oppHtml + right +
@@ -177,13 +180,23 @@
       });
       var results = filtered.filter(function (m) { return m.played; });
       var upcoming = filtered.filter(function (m) { return !m.played; }).slice().reverse();
-      resultsEl.innerHTML = results.length ? results.map(rowHtml).join("") : '<p class="empty">Aucun match joué pour cette sélection.</p>';
-      upcomingEl.innerHTML = upcoming.length ? upcoming.map(rowHtml).join("") : '<p class="empty">Aucun match à venir pour cette sélection.</p>';
+      resultsEl.innerHTML = results.length ? results.map(function (m) { return rowHtml(m, false); }).join("") : '<p class="empty">Aucun match joué pour cette sélection.</p>';
+      upcomingEl.innerHTML = upcoming.length ? upcoming.map(function (m, i) { return rowHtml(m, i === 0); }).join("") : '<p class="empty">Aucun match à venir pour cette sélection.</p>';
       if (resultsCount) resultsCount.textContent = results.length ? "(" + results.length + ")" : "";
       if (upcomingCount) upcomingCount.textContent = upcoming.length ? "(" + upcoming.length + ")" : "";
     }
 
-    seasonSel.addEventListener("change", render);
+    function onFilterChange() {
+      var season = seasonSel.value;
+      var needsLoad = season === "all" || !fixtures.some(function (m) { return String(m.season) === String(season); });
+      if (needsLoad && !fullyLoaded) {
+        resultsEl.innerHTML = '<p class="empty">Chargement…</p>';
+        upcomingEl.innerHTML = '<p class="empty">Chargement…</p>';
+      }
+      ensureSeasonLoaded(season).then(render);
+    }
+
+    seasonSel.addEventListener("change", onFilterChange);
     compSel.addEventListener("change", render);
     render();
   })();
@@ -191,6 +204,43 @@
 </section>
 {% endif %}
 
+{% if club.honours %}
+<section class="honours-section" id="palmares" data-reveal>
+  <h2>Palmarès</h2>
+  <div class="honours-grid">
+    {% for h in club.honours %}
+    <div class="honour-card">
+      {% if h.logo_url %}<img class="honour-logo" src="{{ h.logo_url }}" alt="" width="30" height="30" loading="lazy">{% endif %}
+      <div class="honour-main">
+        <div class="honour-title"><span class="honour-count">{{ h.count }}×</span> {{ h.title }}</div>
+        <div class="honour-seasons">{{ h.seasons[:6]|join(', ') }}{% if h.seasons|length > 6 %} …{% endif %}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if club.standings_history %}
+<section class="standings-history-section" id="historique">
+  <div class="section-head-row">
+    <h2>Classements par saison</h2>
+    <a class="sh-link" href="{{ base }}/{{ competition.code }}/classement.html">Voir le classement complet →</a>
+  </div>
+  <div class="sh-list">
+    {% for row in club.standings_history %}
+    <div class="sh-row" style="--zone: {{ row.zone_color or 'transparent' }}" data-reveal>
+      <span class="sh-season">{{ row.season_label }}</span>
+      <span class="sh-pos">{{ row.pos }}e</span>
+      <span class="sh-bilan">{{ row.played }}J &middot; {{ row.wins }}G {{ row.draws }}N {{ row.losses }}P &middot; {{ row.gf }}-{{ row.ga }}</span>
+      <span class="sh-pts">{{ row.pts }} pts</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<div id="effectif">
 {% for grp_code, grp_label, grp_icon in [("GK","Gardiens","🧤"), ("DEF","Défenseurs","🛡️"), ("MID","Milieux","🎯"), ("ATT","Attaquants","⚡")] %}
 {% set players = squad_by_group.get(grp_code, []) %}
 {% if players %}
@@ -211,4 +261,5 @@
 </section>
 {% endif %}
 {% endfor %}
+</div>
 {% endblock %}

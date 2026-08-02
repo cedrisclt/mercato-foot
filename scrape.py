@@ -59,7 +59,11 @@ def get_club_fixtures(club, old_fixtures, offline):
     kept = [m for m in old_fixtures if m["season"] not in missing]
     fetched = []
     for s in missing:
-        fetched.extend(tm.get_fixtures(club, s, offline))
+        try:
+            fetched.extend(tm.get_fixtures(club, s, offline))
+        except Exception as e:
+            print(f"    !! échec calendrier {club['name']} saison {s} : {e} — on garde l'ancien état")
+            fetched.extend(m for m in old_fixtures if m["season"] == s)
         if not offline:
             time.sleep(1.0)
     return kept + fetched
@@ -74,7 +78,12 @@ def get_competition_standings(comp, old_standings, offline):
         print(f"  ↻ backfill classements {len(missing)} saisons ({missing[0]}-{missing[-1]})")
     out = {str(s): v for s, v in old_standings.items() if int(s) not in missing}
     for s in missing:
-        out[str(s)] = tm.get_standings(comp, s, offline)
+        try:
+            out[str(s)] = tm.get_standings(comp, s, offline)
+        except Exception as e:
+            print(f"  !! échec classement {comp['name']} saison {s} : {e} — on garde l'ancien état")
+            if str(s) in old_standings:
+                out[str(s)] = old_standings[str(s)]
         if not offline:
             time.sleep(1.0)
     return out
@@ -95,22 +104,32 @@ def scrape_competition(comp, offline=False, squads_only=False):
     clubs_out = []
     for c in clubs:
         print(f"· {c['name']} ({c['code']}) …")
-        accent = tm.accent_color(c["logo_url"], offline)
-        squad = tm.get_squad(c, SEASON, offline)
-        info = tm.get_club_info(c, offline)
-        honours = tm.get_honours(c, offline)
-        old_fixtures = old_clubs_by_code.get(c["code"], {}).get("fixtures", [])
-        fixtures = get_club_fixtures(c, old_fixtures, offline)
-        entry = {"code": c["code"], "name": c["name"], "slug": c["slug"],
-                 "id": c["id"], "logo_url": c["logo_url"], "accent": accent,
-                 "squad": squad, "info": info, "honours": honours,
-                 "fixtures": fixtures}
-        if not squads_only:
-            arr, dep = tm.get_transfers(c, SEASON, offline)
-            entry["arr"], entry["dep"] = arr, dep
-        else:
-            old_c = old_clubs_by_code.get(c["code"], {})
-            entry["arr"], entry["dep"] = old_c.get("arr", []), old_c.get("dep", [])
+        old_c = old_clubs_by_code.get(c["code"], {})
+        try:
+            accent = tm.accent_color(c["logo_url"], offline)
+            squad = tm.get_squad(c, SEASON, offline)
+            info = tm.get_club_info(c, offline)
+            honours = tm.get_honours(c, offline)
+            old_fixtures = old_c.get("fixtures", [])
+            fixtures = get_club_fixtures(c, old_fixtures, offline)
+            entry = {"code": c["code"], "name": c["name"], "slug": c["slug"],
+                     "id": c["id"], "logo_url": c["logo_url"], "accent": accent,
+                     "squad": squad, "info": info, "honours": honours,
+                     "fixtures": fixtures}
+            if not squads_only:
+                arr, dep = tm.get_transfers(c, SEASON, offline)
+                entry["arr"], entry["dep"] = arr, dep
+            else:
+                entry["arr"], entry["dep"] = old_c.get("arr", []), old_c.get("dep", [])
+        except Exception as e:
+            print(f"  !! échec {c['name']} ({c['code']}) : {e} — on garde l'ancien état")
+            if old_c:
+                entry = old_c
+            else:
+                entry = {"code": c["code"], "name": c["name"], "slug": c["slug"],
+                         "id": c["id"], "logo_url": c["logo_url"], "accent": "#3b4252",
+                         "squad": [], "info": {"stadium": "", "capacity": ""},
+                         "honours": [], "fixtures": [], "arr": [], "dep": []}
         clubs_out.append(entry)
         if not offline:
             time.sleep(1.0)
@@ -144,7 +163,7 @@ def scrape_competition(comp, offline=False, squads_only=False):
         "standings": standings,
     }
     json.dump(out, open(state_path(comp["code"]), "w", encoding="utf-8"),
-               ensure_ascii=False, indent=1)
+               ensure_ascii=False, separators=(",", ":"))
     na = sum(len(c["arr"]) for c in clubs_out)
     nd = sum(len(c["dep"]) for c in clubs_out)
     print(f"✓ {comp['code']} : {len(clubs_out)} clubs, {na} arrivées, {nd} départs")
@@ -155,7 +174,10 @@ def main():
     offline = "--offline" in sys.argv
     squads_only = "--squads-only" in sys.argv
     for comp in COMPETITIONS:
-        scrape_competition(comp, offline, squads_only)
+        try:
+            scrape_competition(comp, offline, squads_only)
+        except Exception as e:
+            print(f"!! échec {comp['name']} ({comp['code']}) : {e}")
 
 
 if __name__ == "__main__":

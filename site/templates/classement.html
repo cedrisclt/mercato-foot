@@ -9,16 +9,24 @@
 
 <h1>Classement <span class="season">{{ competition.name }}</span></h1>
 
+{% if standings.season_not_started %}
+<p class="season-banner">
+  La saison {{ standings.season_labels[standings.current_season] }} n'a pas encore commencé —
+  voici le classement final de {{ standings.season_labels[standings.default_season] }}.
+  <a href="#" data-jump-season="{{ standings.current_season }}">Voir {{ standings.season_labels[standings.current_season] }} quand même →</a>
+</p>
+{% endif %}
+
 {% if standings.seasons %}
 <div class="season-pills" role="tablist" aria-label="Choix de la saison">
   {% for s in standings.seasons %}
-  <button type="button" class="season-pill {{ 'active' if s == standings.current_season else '' }}" data-season="{{ s }}" role="tab" aria-selected="{{ 'true' if s == standings.current_season else 'false' }}">{{ standings.season_labels[s] }}</button>
+  <button type="button" id="season-tab-{{ s }}" class="season-pill {{ 'active' if s == standings.default_season else '' }}" data-season="{{ s }}" role="tab" aria-selected="{{ 'true' if s == standings.default_season else 'false' }}" aria-controls="season-panel-{{ s }}">{{ standings.season_labels[s] }}</button>
   {% endfor %}
 </div>
 
 {% for s in standings.seasons %}
 {% set rows = standings.by_season.get(s, []) %}
-<div class="season-panel {{ 'active' if s == standings.current_season else '' }}" data-season="{{ s }}">
+<div id="season-panel-{{ s }}" class="season-panel {{ 'active' if s == standings.default_season else '' }}" data-season="{{ s }}" role="tabpanel" aria-labelledby="season-tab-{{ s }}">
   {% if rows %}
   <div class="cls-table" role="table" aria-label="Classement {{ standings.season_labels[s] }}">
     <div class="cls-head-row" role="row">
@@ -38,7 +46,7 @@
     <{{ tag }} class="cls-row" role="row" style="--zone: {{ row.zone_color or 'transparent' }}"{% if row.code %} href="{{ base }}/{{ competition.code }}/equipe/{{ row.code }}.html"{% endif %}>
       <span class="cls-pos" role="cell">{{ row.pos }}</span>
       <span class="cls-club" role="cell">
-        {% if row.logo_url %}<img src="{{ row.logo_url }}" alt="" loading="lazy">{% endif %}
+        {% if row.logo_url %}<img src="{{ row.logo_url }}" alt="" width="22" height="22" loading="lazy">{% endif %}
         <span>{{ row.club_name }}</span>
       </span>
       <span class="cls-num" role="cell">{{ row.played }}</span>
@@ -52,7 +60,12 @@
     </{{ tag }}>
     {% endfor %}
   </div>
-  <p class="cls-legend">▍ Liseré coloré = zone de qualification européenne ou de relégation rapportée par Transfermarkt pour cette saison.</p>
+  {% if rows|selectattr('zone_color')|list %}
+  <p class="cls-legend">
+    <span class="legend-swatch" style="--zone:#afd179"></span>Qualification européenne (plus foncé = tour plus avancé)
+    <span class="legend-swatch" style="--zone:#f8a7a3"></span>Relégation (plus foncé = relégation directe)
+  </p>
+  {% endif %}
   {% else %}
   <p class="empty">Pas de classement disponible pour cette saison.</p>
   {% endif %}
@@ -68,18 +81,24 @@
   var pills = Array.prototype.slice.call(document.querySelectorAll(".season-pill"));
   var panels = Array.prototype.slice.call(document.querySelectorAll(".season-panel"));
   if (!pills.length || !panels.length) return;
-  pills.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var s = btn.getAttribute("data-season");
-      pills.forEach(function (b) {
-        var active = b === btn;
-        b.classList.toggle("active", active);
-        b.setAttribute("aria-selected", active ? "true" : "false");
-      });
-      panels.forEach(function (p) {
-        p.classList.toggle("active", p.getAttribute("data-season") === s);
-      });
+  function activate(s) {
+    pills.forEach(function (b) {
+      var active = b.getAttribute("data-season") === s;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
     });
+    panels.forEach(function (p) {
+      p.classList.toggle("active", p.getAttribute("data-season") === s);
+    });
+  }
+  pills.forEach(function (btn) {
+    btn.addEventListener("click", function () { activate(btn.getAttribute("data-season")); });
+  });
+  var jump = document.querySelector("[data-jump-season]");
+  if (jump) jump.addEventListener("click", function (e) {
+    e.preventDefault();
+    activate(jump.getAttribute("data-jump-season"));
+    jump.closest(".season-banner").style.display = "none";
   });
 })();
 </script>

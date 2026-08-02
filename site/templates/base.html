@@ -4,6 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}Mercato{% endblock %}</title>
+<meta name="description" content="{{ meta_description or 'Suivi du mercato, du calendrier et du classement de Ligue 1, Ligue 2 et National — données Transfermarkt.fr.' }}">
+{% if canonical_url %}<link rel="canonical" href="{{ canonical_url }}">{% endif %}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mercato Foot">
+<meta property="og:title" content="{{ self.title() }}">
+<meta property="og:description" content="{{ meta_description or 'Suivi du mercato, du calendrier et du classement de Ligue 1, Ligue 2 et National.' }}">
+{% if canonical_url %}<meta property="og:url" content="{{ canonical_url }}">{% endif %}
+{% if og_image %}<meta property="og:image" content="{{ og_image }}">{% endif %}
+<meta name="twitter:card" content="{{ 'summary' if og_image else 'summary_large_image' }}">
+<link rel="icon" href="{{ base }}/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{{ base }}/assets/style.css?v={{ css_v }}">
 </head>
 <body>
@@ -12,10 +22,10 @@
     <a class="brand" href="{{ base }}/index.html"><span class="brand-mark">⚽</span>Mercato<span class="brand-accent">Foot</span></a>
     <nav class="comp-tabs">
       {% for c in all_competitions %}
-      <a href="{{ base }}/{{ c.code }}/index.html"
+      <a href="{{ base }}/{{ c.code }}/{{ page_kind if page_kind in ('calendrier', 'classement') else 'index' }}.html"
          class="comp-tab {{ 'active' if c.code == competition.code else '' }}"
          style="--tab-color: {{ c.color }}">
-        {% if c.logo_url %}<img src="{{ c.logo_url }}" alt="" class="tab-logo" loading="lazy">{% endif %}
+        {% if c.logo_url %}<img src="{{ c.logo_url }}" alt="" class="tab-logo" width="20" height="20" loading="lazy">{% endif %}
         <span>{{ c.name }}</span>
       </a>
       {% endfor %}

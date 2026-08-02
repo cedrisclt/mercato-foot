@@ -27,7 +27,7 @@
   --border-soft:rgba(255,255,255,.05);
   --text:#eef0f4;
   --muted:#8b93a3;
-  --muted-dim:#5c6373;
+  --muted-dim:#838ba0;
   --accent:#3b4252;
   --pos-val:#3ddc84;
   --neg-val:#ff6b6b;
@@ -63,6 +63,19 @@ h1,h2{font-weight:800;letter-spacing:-.01em}
 h1{font-family:var(--font-display);text-transform:uppercase;letter-spacing:-.01em;font-stretch:condensed}
 
 ::selection{background:color-mix(in srgb, var(--accent) 50%, #6ea8ff 50%);color:#0a0c10}
+
+/* Global keyboard-focus ring — most interactive elements here (crest links,
+   table rows, pills, nav tabs) sit inside overflow:hidden cards, so the ring
+   needs a visible offset/box-shadow rather than relying on the browser
+   default, which can get clipped by an ancestor. */
+a:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:2px solid color-mix(in srgb, var(--accent, #6ea8ff) 65%, #fff 35%);
+  outline-offset:2px;
+  border-radius:4px;
+}
+.club-card:focus-within,.honour-card:focus-within{
+  box-shadow:0 0 0 2px color-mix(in srgb, var(--accent) 65%, #fff 35%);
+}
 
 /* ---------- Topbar ---------- */
 .topbar{
@@ -191,6 +204,20 @@ h1{font-size:1.7rem;margin:4px 0 20px}
 .comp-subnav a:hover{color:var(--text)}
 .comp-subnav a.active{color:var(--text);border-color:var(--hero-color, var(--accent))}
 
+/* ---------- Club jump/search bar ---------- */
+.club-jump{margin-bottom:28px}
+.club-search-input{width:100%;max-width:320px;margin-bottom:10px}
+.club-jump-chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;-ms-overflow-style:none;scrollbar-width:none}
+.club-jump-chips::-webkit-scrollbar{display:none}
+.club-chip{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;padding:6px 12px 6px 8px;
+  background:var(--panel);border:1px solid var(--border);border-radius:999px;
+  font-size:.8rem;font-weight:600;color:var(--muted);white-space:nowrap;
+  transition:color .15s,border-color .15s,background .15s;
+}
+.club-chip img{border-radius:2px}
+.club-chip:hover{color:var(--text);border-color:color-mix(in srgb, var(--accent, #6ea8ff) 45%, var(--border));background:var(--panel2)}
+
 /* ---------- Latest arrivals strip ---------- */
 .latest{margin-bottom:32px}
 .latest h2{
@@ -198,7 +225,8 @@ h1{font-size:1.7rem;margin:4px 0 20px}
   font-size:.92rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:0 0 12px;font-weight:800;
 }
 .latest h2 small{text-transform:none;letter-spacing:0;font-weight:400;color:var(--muted-dim)}
-.latest-row{display:flex;gap:12px;overflow-x:auto;padding:4px 4px 12px}
+.latest-row{display:flex;gap:12px;overflow-x:auto;padding:4px 4px 12px;-ms-overflow-style:none;scrollbar-width:none}
+.latest-row::-webkit-scrollbar{display:none}
 .latest-card{
   flex:0 0 auto;display:flex;align-items:center;gap:10px;
   background:linear-gradient(155deg,var(--panel),var(--bg-hi));
@@ -227,7 +255,7 @@ h1{font-size:1.7rem;margin:4px 0 20px}
 /* ---------- Club cards grid ---------- */
 .clubs-grid{display:grid;grid-template-columns:1fr;gap:18px}
 .club-card{
-  position:relative;
+  position:relative;scroll-margin-top:76px;
   background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;
   transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);
 }
@@ -303,6 +331,16 @@ h1{font-size:1.7rem;margin:4px 0 20px}
 .team-head-comp-logo{width:18px;height:18px;object-fit:contain}
 .team-head h1{margin:0;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.3);font-size:clamp(1.5rem,3vw,2.1rem)}
 .team-head-fullname{margin-top:3px;color:rgba(255,255,255,.6);font-size:.82rem}
+
+.page-jump{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 28px}
+.page-jump a{
+  font-family:var(--font-display);font-stretch:condensed;text-transform:uppercase;
+  font-size:.76rem;font-weight:800;letter-spacing:.02em;color:var(--muted);
+  padding:6px 14px;border-radius:999px;background:var(--panel);border:1px solid var(--border);
+  transition:color .15s,border-color .15s,background .15s;
+}
+.page-jump a:hover{color:var(--text);border-color:color-mix(in srgb, var(--accent) 45%, var(--border));background:var(--panel2)}
+#calendrier,#palmares,#historique,#effectif{scroll-margin-top:76px}
 .team-head-stadium{margin-top:6px;color:rgba(255,255,255,.85);font-size:.86rem;font-weight:600}
 
 /* ---------- Palmarès ---------- */
@@ -321,7 +359,7 @@ h1{font-size:1.7rem;margin:4px 0 20px}
 .honour-logo{flex:0 0 auto;width:30px;height:30px;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,0,0,.4))}
 .honour-main{flex:1;min-width:0}
 .honour-title{font-size:.87rem;font-weight:700}
-.honour-count{color:color-mix(in srgb, var(--accent) 70%, #fff 30%);font-weight:800}
+.honour-count{font-family:var(--font-display);color:color-mix(in srgb, var(--accent) 70%, #fff 30%);font-weight:800;font-variant-numeric:tabular-nums}
 .honour-seasons{font-size:.74rem;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 /* ---------- Shared form controls (filters, season selects) ---------- */
@@ -353,10 +391,21 @@ h1{font-size:1.7rem;margin:4px 0 20px}
 .fx-count{color:var(--muted-dim);font-weight:400;text-transform:none;letter-spacing:0;font-size:.78rem;margin-left:2px}
 
 .fx-row{
+  position:relative;
   display:grid;grid-template-columns:90px 96px 1fr 66px;grid-template-areas:"date comp opp right";
   column-gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--border-soft);
 }
 .fixture-col > div > .fx-row:first-child{border-top:none}
+.fx-row.fx-next{
+  margin:2px 0 6px;padding:16px 10px 10px;border-top:none;border-radius:var(--radius-md);
+  background:color-mix(in srgb, var(--accent, var(--pos-val)) 14%, var(--panel));
+  border:1px solid color-mix(in srgb, var(--accent, var(--pos-val)) 35%, transparent);
+}
+.fx-next-badge{
+  position:absolute;top:-8px;left:10px;font-family:var(--font-display);font-size:.62rem;
+  text-transform:uppercase;letter-spacing:.03em;font-weight:800;color:#0a0c10;
+  background:var(--pos-val);padding:2px 8px;border-radius:999px;
+}
 .fx-date{grid-area:date;font-size:.77rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .fx-comp{
   grid-area:comp;font-size:.66rem;color:var(--muted-dim);text-transform:uppercase;letter-spacing:.02em;
@@ -431,7 +480,14 @@ a.cls-row:hover{background:var(--panel2)}
 .cls-gd.pos{color:var(--pos-val)}
 .cls-gd.neg{color:var(--neg-val)}
 .cls-pts{font-family:var(--font-display);font-weight:800;font-size:1rem;font-variant-numeric:tabular-nums}
-.cls-legend{font-size:.74rem;color:var(--muted-dim);margin:10px 2px 0}
+.cls-legend{font-size:.78rem;color:var(--muted);margin:10px 2px 0;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.legend-swatch{display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--zone);margin-left:8px}
+.legend-swatch:first-child{margin-left:0}
+.season-banner{
+  background:var(--panel);border:1px solid var(--border);border-left:3px solid #ffb547;
+  border-radius:var(--radius-md);padding:12px 16px;margin:0 0 20px;font-size:.88rem;color:var(--muted);
+}
+.season-banner a{color:var(--text);font-weight:700;text-decoration:underline;text-underline-offset:2px;margin-left:6px}
 
 /* compact variant, used on the calendrier sidebar */
 .cls-table.compact .cls-head-row,.cls-table.compact .cls-row{

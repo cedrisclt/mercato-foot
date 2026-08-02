@@ -24,6 +24,10 @@ sys.path.insert(0, ROOT)
 from config.competitions import COMPETITIONS
 from config.short_names import SHORT_NAMES
 
+# Canonical production URL — used for <link rel="canonical">/og:url, which
+# must stay correct regardless of SITE_BASE_PATH (empty for local previews).
+SITE_URL = "https://cedrisclt.github.io/mercato-foot"
+
 
 def dname(club_id, fallback):
     """Canonical short display name for a club id, else whatever name we
@@ -166,6 +170,18 @@ def build():
     shutil.copy(os.path.join(STATIC, "style.css"), os.path.join(PUBLIC, "assets", "style.css"))
     shutil.copy(os.path.join(STATIC, "app.js"), os.path.join(PUBLIC, "assets", "app.js"))
     shutil.copytree(os.path.join(STATIC, "fonts"), os.path.join(PUBLIC, "assets", "fonts"))
+    shutil.copy(os.path.join(STATIC, "favicon.svg"), os.path.join(PUBLIC, "favicon.svg"))
+    open(os.path.join(PUBLIC, "robots.txt"), "w", encoding="utf-8").write(
+        f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
+
+    sitemap_paths = []
+
+    def write_page(rel_path, html):
+        """rel_path is relative to PUBLIC, e.g. 'FR1/equipe/PSG.html'."""
+        full = os.path.join(PUBLIC, rel_path)
+        os.makedirs(os.path.dirname(full), exist_ok=True)
+        open(full, "w", encoding="utf-8").write(html)
+        sitemap_paths.append("/" + rel_path)
 
     def content_hash(fn):
         return hashlib.sha256(open(fn, "rb").read()).hexdigest()[:10]
@@ -228,12 +244,33 @@ def build():
         # first, each row linked back to our own club page when possible.
         standings_raw = d.get("standings", {})
         standings_seasons = sorted((int(s) for s in standings_raw.keys()), reverse=True)
+        by_season = {}
+        for s in standings_seasons:
+            rows = enrich_standings(standings_raw.get(str(s), []), clubs_by_id)
+            if not any(r.get("played", 0) for r in rows):
+                # Nobody's played yet this season (preseason) — a "1st place"
+                # zone-colour stripe on an 18-way tie at 0 pts would just be
+                # misleading, so strip it for this season's table only.
+                rows = [{**r, "zone_color": ""} for r in rows]
+            by_season[s] = rows
+
+        # Default the UI to the current season only once it has real matches;
+        # otherwise show the last *completed* season so "classement" means
+        # something on day one of a fresh mercato window.
+        default_season = d["season"]
+        if not any(r.get("played", 0) for r in by_season.get(d["season"], [])):
+            for s in standings_seasons:
+                if s != d["season"] and any(r.get("played", 0) for r in by_season.get(s, [])):
+                    default_season = s
+                    break
+
         standings_ctx = {
             "seasons": standings_seasons,
             "season_labels": {s: season_label(s) for s in standings_seasons},
             "current_season": d["season"],
-            "by_season": {s: enrich_standings(standings_raw.get(str(s), []), clubs_by_id)
-                         for s in standings_seasons},
+            "default_season": default_season,
+            "season_not_started": default_season != d["season"],
+            "by_season": by_season,
         }
 
         matchday_ctx = build_matchday_view(d["clubs"], clubs_by_id, d["season"])
@@ -251,26 +288,32 @@ def build():
                 item["dest_name"] = dest["name"]
             latest_ctx.append(item)
 
-        out_dir = os.path.join(PUBLIC, comp["code"])
-        os.makedirs(out_dir, exist_ok=True)
+        season_lbl = season_label(d["season"])
+        comp_code = comp["code"]
+
         tpl = env.get_template("mercato.html")
-        html = tpl.render(competition=comp_ctx, all_competitions=all_comps_meta,
-                          clubs=clubs_ctx, latest=latest_ctx, standings=standings_ctx)
-        open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8").write(html)
+        html = tpl.render(competition=comp_ctx, all_competitions=all_comps_meta, page_kind="mercato",
+                          clubs=clubs_ctx, latest=latest_ctx, standings=standings_ctx,
+                          meta_description=f"Mercato {d['name']} {season_lbl} : arrivées, départs et indemnités de transfert, club par club.",
+                          og_image=comp_ctx["logo_url"], canonical_url=f"{SITE_URL}/{comp_code}/index.html")
+        write_page(f"{comp_code}/index.html", html)
 
         tpl_cl = env.get_template("classement.html")
-        html_cl = tpl_cl.render(competition=comp_ctx, all_competitions=all_comps_meta,
-                                standings=standings_ctx)
-        open(os.path.join(out_dir, "classement.html"), "w", encoding="utf-8").write(html_cl)
+        html_cl = tpl_cl.render(competition=comp_ctx, all_competitions=all_comps_meta, page_kind="classement",
+                                standings=standings_ctx,
+                                meta_description=f"Classement {d['name']} : tableau complet, 10 dernières saisons (2017/18 à {season_lbl}).",
+                                og_image=comp_ctx["logo_url"], canonical_url=f"{SITE_URL}/{comp_code}/classement.html")
+        write_page(f"{comp_code}/classement.html", html_cl)
 
         tpl_cal = env.get_template("calendrier.html")
-        html_cal = tpl_cal.render(competition=comp_ctx, all_competitions=all_comps_meta,
+        html_cal = tpl_cal.render(competition=comp_ctx, all_competitions=all_comps_meta, page_kind="calendrier",
                                   matchday=matchday_ctx,
-                                  standings=standings_ctx.get("by_season", {}).get(d["season"], []))
-        open(os.path.join(out_dir, "calendrier.html"), "w", encoding="utf-8").write(html_cal)
+                                  standings=standings_ctx.get("by_season", {}).get(standings_ctx["default_season"], []),
+                                  standings_meta=standings_ctx,
+                                  meta_description=f"Calendrier {d['name']} {season_lbl} : tous les matchs, journée par journée.",
+                                  og_image=comp_ctx["logo_url"], canonical_url=f"{SITE_URL}/{comp_code}/calendrier.html")
+        write_page(f"{comp_code}/calendrier.html", html_cal)
 
-        team_dir = os.path.join(out_dir, "equipe")
-        os.makedirs(team_dir, exist_ok=True)
         tpl_eq = env.get_template("equipe.html")
         for c in d["clubs"]:
             squad_by_group = {"GK": [], "DEF": [], "MID": [], "ATT": []}
@@ -288,6 +331,18 @@ def build():
             fixtures_seasons = sorted({m["season"] for m in fixtures_ctx}, reverse=True)
             fixtures_comps = sorted({m["comp"] for m in fixtures_ctx})
 
+            # Full history (up to 10 seasons) is written out as a small
+            # per-club JSON file and only fetched on demand (season/comp
+            # filter picks a season outside the inlined window) — most
+            # visits only ever look at the current season, so there's no
+            # reason to ship a growing multi-year archive on every load.
+            recent_seasons = set(fixtures_seasons[:2])
+            fixtures_recent = [m for m in fixtures_ctx if m["season"] in recent_seasons]
+            fixtures_json_path = f"{comp_code}/fixtures/{c['code']}.json"
+            os.makedirs(os.path.join(PUBLIC, comp_code, "fixtures"), exist_ok=True)
+            json.dump(fixtures_ctx, open(os.path.join(PUBLIC, fixtures_json_path), "w", encoding="utf-8"),
+                      ensure_ascii=False, separators=(",", ":"))
+
             own_history = []
             for s in standings_ctx["seasons"]:
                 row = next((r for r in standings_ctx["by_season"][s] if r.get("club_id") == c["id"]), None)
@@ -297,12 +352,16 @@ def build():
             club_ctx = {"code": c["code"], "name": dname(c["id"], c["name"]),
                        "full_name": c["name"], "logo_url": c["logo_url"],
                        "accent": c["accent"], "info": c.get("info", {}),
-                       "honours": honours, "fixtures": fixtures_ctx,
+                       "honours": honours, "fixtures": fixtures_recent,
+                       "fixtures_full_url": fixtures_json_path,
                        "fixtures_seasons": fixtures_seasons, "fixtures_comps": fixtures_comps,
                        "current_season": d["season"], "standings_history": own_history}
-            html_eq = tpl_eq.render(competition=comp_ctx, all_competitions=all_comps_meta,
-                                    club=club_ctx, squad_by_group=squad_by_group)
-            open(os.path.join(team_dir, f"{c['code']}.html"), "w", encoding="utf-8").write(html_eq)
+            html_eq = tpl_eq.render(competition=comp_ctx, all_competitions=all_comps_meta, page_kind="equipe",
+                                    club=club_ctx, squad_by_group=squad_by_group,
+                                    meta_description=f"{club_ctx['full_name']} : effectif, palmarès, stade, calendrier et résultats — {d['name']} {season_lbl}.",
+                                    og_image=club_ctx["logo_url"],
+                                    canonical_url=f"{SITE_URL}/{comp_code}/equipe/{c['code']}.html")
+            write_page(f"{comp_code}/equipe/{c['code']}.html", html_eq)
 
         print(f"✓ {comp['code']} : {len(d['clubs'])} pages effectif + mercato + classement + calendrier")
 
@@ -314,11 +373,20 @@ def build():
                            "logo_url": comp.get("logo_url", ""),
                            "color": comp.get("color", "#3b4252"),
                            "n_clubs": len(d["clubs"]) if d else 0})
-    season = COMPETITIONS[0].get("season") if COMPETITIONS else 2026
     from config.competitions import SEASON
-    open(os.path.join(PUBLIC, "index.html"), "w", encoding="utf-8").write(
-        tpl_home.render(competitions=home_comps, season=SEASON))
+    write_page("index.html", tpl_home.render(
+        competitions=home_comps, season=SEASON,
+        meta_description="Suivi du mercato, du calendrier et du classement de Ligue 1, Ligue 2 et National — données Transfermarkt.fr.",
+        canonical_url=f"{SITE_URL}/index.html"))
     print(f"✓ index.html (accueil) généré")
+
+    sitemap_xml = ['<?xml version="1.0" encoding="UTF-8"?>',
+                  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for path in sitemap_paths:
+        sitemap_xml.append(f"  <url><loc>{SITE_URL}{path}</loc></url>")
+    sitemap_xml.append("</urlset>")
+    open(os.path.join(PUBLIC, "sitemap.xml"), "w", encoding="utf-8").write("\n".join(sitemap_xml) + "\n")
+    print(f"✓ sitemap.xml ({len(sitemap_paths)} pages) + robots.txt")
 
 
 if __name__ == "__main__":
