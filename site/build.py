@@ -9,6 +9,7 @@ import os
 import sys
 import json
 import shutil
+import hashlib
 from datetime import datetime
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -72,12 +73,21 @@ def build():
     shutil.copy(os.path.join(STATIC, "style.css"), os.path.join(PUBLIC, "assets", "style.css"))
     shutil.copy(os.path.join(STATIC, "app.js"), os.path.join(PUBLIC, "assets", "app.js"))
 
+    def content_hash(fn):
+        return hashlib.sha256(open(fn, "rb").read()).hexdigest()[:10]
+
     env = Environment(loader=FileSystemLoader(TEMPLATES),
                       autoescape=select_autoescape(["html"]))
     # GitHub Pages project sites are served from /<repo>/, not the domain
     # root, so every root-relative link/asset needs this prefix. Empty for
     # local previews (served from the origin's root by `python -m http.server`).
     env.globals["base"] = os.environ.get("SITE_BASE_PATH", "").rstrip("/")
+    # Cache-busting: assets are always served from the same /assets/*.css|js
+    # path across deploys, and GitHub Pages' CDN can keep serving a stale
+    # cached copy for a while after a push. Appending a content hash changes
+    # the URL whenever the file actually changes, forcing a fresh fetch.
+    env.globals["css_v"] = content_hash(os.path.join(STATIC, "style.css"))
+    env.globals["js_v"] = content_hash(os.path.join(STATIC, "app.js"))
 
     all_comps_meta = []
     loaded = {}

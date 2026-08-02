@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}Mercato{% endblock %}</title>
-<link rel="stylesheet" href="{{ base }}/assets/style.css">
+<link rel="stylesheet" href="{{ base }}/assets/style.css?v={{ css_v }}">
 </head>
 <body>
 <header class="topbar">
@@ -26,6 +26,6 @@
 {% block content %}{% endblock %}
 </main>
 <footer class="footsrc">Données : Transfermarkt.fr — généré le {{ competition.updated_fmt }}</footer>
-<script src="{{ base }}/assets/app.js" defer></script>
+<script src="{{ base }}/assets/app.js?v={{ js_v }}" defer></script>
 </body>
 </html>
