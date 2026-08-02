@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}Mercato{% endblock %}</title>
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="{{ base }}/assets/style.css">
 </head>
 <body>
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="/index.html"><span class="brand-mark">⚽</span>Mercato<span class="brand-accent">Foot</span></a>
+    <a class="brand" href="{{ base }}/index.html"><span class="brand-mark">⚽</span>Mercato<span class="brand-accent">Foot</span></a>
     <nav class="comp-tabs">
       {% for c in all_competitions %}
-      <a href="/{{ c.code }}/index.html"
+      <a href="{{ base }}/{{ c.code }}/index.html"
          class="comp-tab {{ 'active' if c.code == competition.code else '' }}"
          style="--tab-color: {{ c.color }}">
         {% if c.logo_url %}<img src="{{ c.logo_url }}" alt="" class="tab-logo" loading="lazy">{% endif %}
@@ -26,6 +26,6 @@
 {% block content %}{% endblock %}
 </main>
 <footer class="footsrc">Données : Transfermarkt.fr — généré le {{ competition.updated_fmt }}</footer>
-<script src="/assets/app.js" defer></script>
+<script src="{{ base }}/assets/app.js" defer></script>
 </body>
 </html>

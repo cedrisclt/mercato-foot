@@ -74,6 +74,10 @@ def build():
 
     env = Environment(loader=FileSystemLoader(TEMPLATES),
                       autoescape=select_autoescape(["html"]))
+    # GitHub Pages project sites are served from /<repo>/, not the domain
+    # root, so every root-relative link/asset needs this prefix. Empty for
+    # local previews (served from the origin's root by `python -m http.server`).
+    env.globals["base"] = os.environ.get("SITE_BASE_PATH", "").rstrip("/")
 
     all_comps_meta = []
     loaded = {}

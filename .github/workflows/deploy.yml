@@ -42,7 +42,12 @@ jobs:
           git diff --cached --quiet || git commit -m "MAJ mercato (auto)"
           git push
 
+      - id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build site
+        env:
+          SITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: python3 site/build.py
 
       - uses: actions/upload-pages-artifact@v3

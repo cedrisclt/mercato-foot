@@ -42,7 +42,7 @@
 <section class="clubs-grid">
   {% for c in clubs %}
   <article class="club-card" style="--accent: {{ c.accent }}" data-reveal>
-    <a class="club-head" href="/{{ competition.code }}/equipe/{{ c.code }}.html">
+    <a class="club-head" href="{{ base }}/{{ competition.code }}/equipe/{{ c.code }}.html">
       <span class="club-head-shine" aria-hidden="true"></span>
       <span class="crest-wrap"><img class="crest" src="{{ c.logo_url }}" alt="{{ c.name }}" loading="lazy"></span>
       <span class="club-id">
