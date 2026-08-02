@@ -2,7 +2,7 @@
  "code": "FR1",
  "name": "Ligue 1",
  "season": 2026,
- "updated": "2026-08-02T15:52:47",
+ "updated": "2026-08-02T18:15:55",
  "clubs": [
   {
    "code": "PSG",
@@ -10,7 +10,7 @@
    "slug": "fc-paris-saint-germain",
    "id": 583,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/583.png",
-   "accent": "#385c88",
+   "accent": "#395c88",
    "squad": [
     {
      "n": "39",
@@ -203,16 +203,229 @@
      "grp": "ATT",
      "age": 29,
      "val": 100.0
-    },
-    {
-     "n": "",
-     "p": "Randal Kolo Muani",
-     "pos": "AC",
-     "grp": "ATT",
-     "age": 27,
-     "val": 20.0
     }
    ],
+   "info": {
+    "stadium": "Parc des Princes",
+    "capacity": "48 583 places"
+   },
+   "honours": [
+    {
+     "title": "UEFA Champions League winner",
+     "count": 2,
+     "seasons": [
+      "25/26",
+      "24/25"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/4.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France",
+     "count": 14,
+     "seasons": [
+      "25/26",
+      "24/25",
+      "23/24",
+      "22/23",
+      "21/22",
+      "19/20",
+      "18/19",
+      "17/18",
+      "15/16",
+      "14/15",
+      "13/14",
+      "12/13",
+      "93/94",
+      "85/86"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "FIFA Intercontinental Cup Winner",
+     "count": 1,
+     "seasons": [
+      "25/26"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1100.png?lm=1734608335"
+    },
+    {
+     "title": "Cup Winners Cup Runner Up",
+     "count": 1,
+     "seasons": [
+      "95/96"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/53.png?lm=1647507697"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 16,
+     "seasons": [
+      "24/25",
+      "23/24",
+      "20/21",
+      "19/20",
+      "17/18",
+      "16/17",
+      "15/16",
+      "14/15",
+      "09/10",
+      "05/06",
+      "03/04",
+      "97/98",
+      "94/95",
+      "92/93",
+      "82/83",
+      "81/82"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Vainqueur Coupe de la Ligue",
+     "count": 9,
+     "seasons": [
+      "19/20",
+      "17/18",
+      "16/17",
+      "15/16",
+      "14/15",
+      "13/14",
+      "07/08",
+      "97/98",
+      "94/95"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/37.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 1,
+     "seasons": [
+      "70/71"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Intertoto Cup Champion",
+     "count": 1,
+     "seasons": [
+      "01/02"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/59.png?lm=1461847499"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 14,
+     "seasons": [
+      "25/26",
+      "24/25",
+      "23/24",
+      "22/23",
+      "20/21",
+      "19/20",
+      "18/19",
+      "17/18",
+      "16/17",
+      "15/16",
+      "14/15",
+      "13/14",
+      "98/99",
+      "95/96"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Supercoupe de l'UEFA",
+      "matchday": "Finale",
+      "date": "mer. 12/08/2026",
+      "time": "21:00",
+      "venue": "home",
+      "opponent": "Aston Villa",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/405.png?lm=1717155982",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Trophée des Champions",
+      "matchday": "Finale",
+      "date": "dim. 16/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "RC Lens",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/826.png?lm=1595457059",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "dim. 23/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Stade Rennais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/273.png?lm=1691503972",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "ven. 28/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "LOSC Lille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1082.png?lm=1529521041",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "ven. 04/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Monaco",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/162.png?lm=1654781919",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "dim. 13/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Stade Brestois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3911.png?lm=1768836091",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "dim. 20/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Marseille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/244.png?lm=1775675175",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Le Mans FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1164.png?lm=1459583517",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [],
    "dep": [
     {
@@ -243,6 +456,15 @@
      "fs": "2026-08-02"
     },
     {
+     "p": "Randal Kolo Muani",
+     "age": 27,
+     "pos": "AC",
+     "club": "Juventus",
+     "type": "none",
+     "val": 0.0,
+     "fs": "2026-08-02"
+    },
+    {
      "p": "Gabriel Moscardo",
      "age": 20,
      "pos": "MDC",
@@ -268,7 +490,7 @@
    "slug": "as-monaco",
    "id": 162,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/162.png",
-   "accent": "#8c4b41",
+   "accent": "#8c463b",
    "squad": [
     {
      "n": "16",
@@ -487,6 +709,167 @@
      "val": 1.5
     }
    ],
+   "info": {
+    "stadium": "Stade Louis-II",
+    "capacity": "18 525 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 8,
+     "seasons": [
+      "16/17",
+      "99/00",
+      "96/97",
+      "87/88",
+      "81/82",
+      "77/78",
+      "62/63",
+      "60/61"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 5,
+     "seasons": [
+      "90/91",
+      "84/85",
+      "79/80",
+      "62/63",
+      "59/60"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Vainqueur Coupe de la Ligue",
+     "count": 1,
+     "seasons": [
+      "02/03"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/37.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 1,
+     "seasons": [
+      "12/13"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 4,
+     "seasons": [
+      "00/01",
+      "97/98",
+      "85/86",
+      "60/61"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    },
+    {
+     "title": "Winner Coupe Charles Drago",
+     "count": 1,
+     "seasons": [
+      "60/61"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1026.png?lm=1723473395"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "dim. 23/08/2026",
+      "time": "17:15",
+      "venue": "away",
+      "opponent": "Le Havre AC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/738.png?lm=1408780648",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "dim. 30/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Marseille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/244.png?lm=1775675175",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "ven. 04/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "PSG",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/583.png?lm=1728026461",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "sam. 12/09/2026",
+      "time": "17:15",
+      "venue": "away",
+      "opponent": "R. Strasbourg",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/667.png?lm=1664991833",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "RC Lens",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/826.png?lm=1595457059",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Toulouse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/415.png?lm=1740065124",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "FC Lorient",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1158.png?lm=1406642498",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "LOSC Lille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1082.png?lm=1529521041",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Matthis Abline",
@@ -597,7 +980,7 @@
    "slug": "rc-strassburg-alsace",
    "id": 667,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/667.png",
-   "accent": "#4d718c",
+   "accent": "#4c708c",
    "squad": [
     {
      "n": "12",
@@ -848,6 +1231,159 @@
      "val": 3.5
     }
    ],
+   "info": {
+    "stadium": "Stade de la Meinau",
+    "capacity": "32 000 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 1,
+     "seasons": [
+      "78/79"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 3,
+     "seasons": [
+      "00/01",
+      "65/66",
+      "50/51"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Vainqueur Coupe de la Ligue",
+     "count": 3,
+     "seasons": [
+      "18/19",
+      "04/05",
+      "96/97"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/37.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 3,
+     "seasons": [
+      "16/17",
+      "87/88",
+      "76/77"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Champion de France de D3",
+     "count": 1,
+     "seasons": [
+      "15/16"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    },
+    {
+     "title": "Intertoto Cup Champion",
+     "count": 1,
+     "seasons": [
+      "95/96"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/59.png?lm=1461847499"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "ven. 21/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Marseille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/244.png?lm=1775675175",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "sam. 29/08/2026",
+      "time": "17:15",
+      "venue": "home",
+      "opponent": "RC Lens",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/826.png?lm=1595457059",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "dim. 06/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Troyes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1095.png?lm=1599945497",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "sam. 12/09/2026",
+      "time": "17:15",
+      "venue": "home",
+      "opponent": "Monaco",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/162.png?lm=1654781919",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Paris FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10004.png?lm=1411995262",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "OGC Nice",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/417.png?lm=1408779490",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "PSG",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/583.png?lm=1728026461",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Stade Rennais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/273.png?lm=1691503972",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Diogo Sousa",
@@ -949,7 +1485,7 @@
    "slug": "losc-lille",
    "id": 1082,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1082.png",
-   "accent": "#8c5870",
+   "accent": "#8c526d",
    "squad": [
     {
      "n": "1",
@@ -1184,6 +1720,156 @@
      "val": 0.9
     }
    ],
+   "info": {
+    "stadium": "Decathlon Arena-Stade Pierre-Mauroy",
+    "capacity": "50 186 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 4,
+     "seasons": [
+      "20/21",
+      "10/11",
+      "53/54",
+      "45/46"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 6,
+     "seasons": [
+      "10/11",
+      "54/55",
+      "52/53",
+      "47/48",
+      "46/47",
+      "45/46"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 4,
+     "seasons": [
+      "99/00",
+      "77/78",
+      "73/74",
+      "63/64"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Intertoto Cup Champion",
+     "count": 1,
+     "seasons": [
+      "04/05"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/59.png?lm=1461847499"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 1,
+     "seasons": [
+      "21/22"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "dim. 23/08/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Angers SCO",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1420.png?lm=1687525425",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "ven. 28/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "PSG",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/583.png?lm=1728026461",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "jeu. 03/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Toulouse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/415.png?lm=1740065124",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "dim. 13/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "Troyes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1095.png?lm=1599945497",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "OGC Nice",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/417.png?lm=1408779490",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Le Havre AC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/738.png?lm=1408780648",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Stade Brestois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3911.png?lm=1768836091",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Monaco",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/162.png?lm=1654781919",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Başar Önal",
@@ -1294,7 +1980,7 @@
    "slug": "olympique-lyon",
    "id": 1041,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1041.png",
-   "accent": "#8c597e",
+   "accent": "#8c547e",
    "squad": [
     {
      "n": "1",
@@ -1569,6 +2255,172 @@
      "val": 0.8
     }
    ],
+   "info": {
+    "stadium": "Groupama Stadium",
+    "capacity": "59 186 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 7,
+     "seasons": [
+      "07/08",
+      "06/07",
+      "05/06",
+      "04/05",
+      "03/04",
+      "02/03",
+      "01/02"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 5,
+     "seasons": [
+      "11/12",
+      "07/08",
+      "72/73",
+      "66/67",
+      "63/64"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Vainqueur Coupe de la Ligue",
+     "count": 1,
+     "seasons": [
+      "00/01"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/37.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 3,
+     "seasons": [
+      "88/89",
+      "53/54",
+      "50/51"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Intertoto Cup Champion",
+     "count": 1,
+     "seasons": [
+      "97/98"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/59.png?lm=1461847499"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 8,
+     "seasons": [
+      "12/13",
+      "07/08",
+      "06/07",
+      "05/06",
+      "04/05",
+      "03/04",
+      "02/03",
+      "72/73"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "UEFA Champions League Qualification",
+      "matchday": "3e tour",
+      "date": "mar. 04/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Sparta Prague",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/197.png?lm=1705397331",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "UEFA Champions League Qualification",
+      "matchday": "3e tour",
+      "date": "mar. 11/08/2026",
+      "time": "21:00",
+      "venue": "home",
+      "opponent": "Sparta Prague",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/197.png?lm=1705397331",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "sam. 22/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Toulouse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/415.png?lm=1740065124",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "sam. 29/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Le Havre AC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/738.png?lm=1408780648",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "sam. 05/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "AJ Auxerre",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/290.png?lm=1635851977",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "sam. 12/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Paris FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10004.png?lm=1411995262",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Stade Rennais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/273.png?lm=1691503972",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "RC Lens",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/826.png?lm=1595457059",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Mads Bidstrup",
@@ -1688,7 +2540,7 @@
    "slug": "fc-stade-rennes",
    "id": 273,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/273.png",
-   "accent": "#8c3920",
+   "accent": "#8c391e",
    "squad": [
     {
      "n": "30",
@@ -1931,6 +2783,132 @@
      "val": 15.0
     }
    ],
+   "info": {
+    "stadium": "Roazhon Park",
+    "capacity": "29 778 places"
+   },
+   "honours": [
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 3,
+     "seasons": [
+      "18/19",
+      "70/71",
+      "64/65"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "82/83",
+      "55/56"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 1,
+     "seasons": [
+      "70/71"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "dim. 23/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "PSG",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/583.png?lm=1728026461",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "dim. 30/08/2026",
+      "time": "17:15",
+      "venue": "home",
+      "opponent": "Le Mans FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1164.png?lm=1459583517",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "dim. 06/09/2026",
+      "time": "17:15",
+      "venue": "away",
+      "opponent": "Angers SCO",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1420.png?lm=1687525425",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "ven. 11/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Marseille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/244.png?lm=1775675175",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Ol. Lyonnais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1041.png?lm=1656668172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "AJ Auxerre",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/290.png?lm=1635851977",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Paris FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10004.png?lm=1411995262",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "R. Strasbourg",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/667.png?lm=1664991833",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Eliezer Mayenda",
@@ -2095,7 +3073,7 @@
    "slug": "olympique-marseille",
    "id": 244,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/244.png",
-   "accent": "#3f688c",
+   "accent": "#33628c",
    "squad": [
     {
      "n": "1",
@@ -2282,6 +3260,190 @@
      "val": 3.5
     }
    ],
+   "info": {
+    "stadium": "Orange Vélodrome",
+    "capacity": "67 394 places"
+   },
+   "honours": [
+    {
+     "title": "UEFA Champions League winner",
+     "count": 1,
+     "seasons": [
+      "92/93"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/4.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France",
+     "count": 9,
+     "seasons": [
+      "09/10",
+      "91/92",
+      "90/91",
+      "89/90",
+      "88/89",
+      "71/72",
+      "70/71",
+      "47/48",
+      "36/37"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 10,
+     "seasons": [
+      "88/89",
+      "75/76",
+      "71/72",
+      "68/69",
+      "42/43",
+      "37/38",
+      "34/35",
+      "1926/27",
+      "1925/26",
+      "1923/24"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Vainqueur Coupe de la Ligue",
+     "count": 3,
+     "seasons": [
+      "11/12",
+      "10/11",
+      "09/10"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/37.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 1,
+     "seasons": [
+      "94/95"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Intertoto Cup Champion",
+     "count": 1,
+     "seasons": [
+      "05/06"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/59.png?lm=1461847499"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 3,
+     "seasons": [
+      "11/12",
+      "10/11",
+      "71/72"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    },
+    {
+     "title": "Winner Coupe Charles Drago",
+     "count": 1,
+     "seasons": [
+      "56/57"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1026.png?lm=1723473395"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "ven. 21/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "R. Strasbourg",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/667.png?lm=1664991833",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "dim. 30/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Monaco",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/162.png?lm=1654781919",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "dim. 06/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Paris FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10004.png?lm=1411995262",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "ven. 11/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Stade Rennais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/273.png?lm=1691503972",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "dim. 20/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "PSG",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/583.png?lm=1728026461",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Troyes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1095.png?lm=1599945497",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Angers SCO",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1420.png?lm=1687525425",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Le Havre AC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/738.png?lm=1408780648",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Facundo Medina",
@@ -2356,7 +3518,7 @@
    "slug": "paris-fc",
    "id": 10004,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/10004.png",
-   "accent": "#2e4a6e",
+   "accent": "#29466b",
    "squad": [
     {
      "n": "16",
@@ -2583,6 +3745,104 @@
      "val": 1.0
     }
    ],
+   "info": {
+    "stadium": "Stade Jean Bouin",
+    "capacity": "19 904 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "sam. 22/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Troyes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1095.png?lm=1599945497",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "dim. 30/08/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "OGC Nice",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/417.png?lm=1408779490",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "dim. 06/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Marseille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/244.png?lm=1775675175",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "sam. 12/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Ol. Lyonnais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1041.png?lm=1656668172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "R. Strasbourg",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/667.png?lm=1664991833",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "FC Lorient",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1158.png?lm=1406642498",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Stade Rennais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/273.png?lm=1691503972",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "RC Lens",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/826.png?lm=1595457059",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Patrick Zabi",
@@ -2738,7 +3998,7 @@
    "slug": "rc-lens",
    "id": 826,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/826.png",
-   "accent": "#8c5d34",
+   "accent": "#8c5b30",
    "squad": [
     {
      "n": "40",
@@ -2965,6 +4225,158 @@
      "val": 0.25
     }
    ],
+   "info": {
+    "stadium": "Stade Bollaert-Delelis",
+    "capacity": "38 223 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 1,
+     "seasons": [
+      "97/98"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 1,
+     "seasons": [
+      "25/26"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Vainqueur Coupe de la Ligue",
+     "count": 1,
+     "seasons": [
+      "98/99"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/37.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 4,
+     "seasons": [
+      "08/09",
+      "72/73",
+      "48/49",
+      "36/37"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Intertoto Cup Champion",
+     "count": 1,
+     "seasons": [
+      "05/06"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/59.png?lm=1461847499"
+    },
+    {
+     "title": "Winner Coupe Charles Drago",
+     "count": 3,
+     "seasons": [
+      "64/65",
+      "59/60",
+      "58/59"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1026.png?lm=1723473395"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Trophée des Champions",
+      "matchday": "Finale",
+      "date": "dim. 16/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "PSG",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/583.png?lm=1728026461",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "sam. 22/08/2026",
+      "time": "17:15",
+      "venue": "home",
+      "opponent": "AJ Auxerre",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/290.png?lm=1635851977",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "sam. 29/08/2026",
+      "time": "17:15",
+      "venue": "away",
+      "opponent": "R. Strasbourg",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/667.png?lm=1664991833",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "sam. 05/09/2026",
+      "time": "17:15",
+      "venue": "home",
+      "opponent": "FC Lorient",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1158.png?lm=1406642498",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "dim. 13/09/2026",
+      "time": "17:15",
+      "venue": "away",
+      "opponent": "Le Mans FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1164.png?lm=1459583517",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Monaco",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/162.png?lm=1654781919",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Ol. Lyonnais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1041.png?lm=1656668172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Troyes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1095.png?lm=1599945497",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Michal Skoras",
@@ -3183,7 +4595,7 @@
    "slug": "fc-toulouse",
    "id": 415,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/415.png",
-   "accent": "#7a5677",
+   "accent": "#7b5778",
    "squad": [
     {
      "n": "1",
@@ -3370,6 +4782,123 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stadium Municipal",
+    "capacity": "33 150 places"
+   },
+   "honours": [
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 1,
+     "seasons": [
+      "22/23"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 3,
+     "seasons": [
+      "21/22",
+      "02/03",
+      "81/82"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "sam. 22/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Ol. Lyonnais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1041.png?lm=1656668172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "sam. 29/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Stade Brestois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3911.png?lm=1768836091",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "jeu. 03/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "LOSC Lille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1082.png?lm=1529521041",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "sam. 12/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Lorient",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1158.png?lm=1406642498",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Le Havre AC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/738.png?lm=1408780648",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Monaco",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/162.png?lm=1654781919",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Le Mans FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1164.png?lm=1459583517",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Troyes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1095.png?lm=1599945497",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Christ Tapé",
@@ -3480,7 +5009,7 @@
    "slug": "ogc-nizza",
    "id": 417,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/417.png",
-   "accent": "#795e4a",
+   "accent": "#795d49",
    "squad": [
     {
      "n": "80",
@@ -3683,6 +5212,145 @@
      "val": 0.4
     }
    ],
+   "info": {
+    "stadium": "Allianz Riviera",
+    "capacity": "36 178 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 4,
+     "seasons": [
+      "58/59",
+      "55/56",
+      "51/52",
+      "50/51"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 3,
+     "seasons": [
+      "96/97",
+      "53/54",
+      "51/52"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 4,
+     "seasons": [
+      "93/94",
+      "69/70",
+      "64/65",
+      "47/48"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 1,
+     "seasons": [
+      "69/70"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "sam. 22/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "FC Lorient",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1158.png?lm=1406642498",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "dim. 30/08/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Paris FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10004.png?lm=1411995262",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "sam. 05/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Le Mans FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1164.png?lm=1459583517",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "sam. 12/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "AJ Auxerre",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/290.png?lm=1635851977",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "LOSC Lille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1082.png?lm=1529521041",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "R. Strasbourg",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/667.png?lm=1664991833",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Ol. Lyonnais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1041.png?lm=1656668172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Stade Brestois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3911.png?lm=1768836091",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Laurent Abergel",
@@ -4069,6 +5737,141 @@
      "val": 0.3
     }
    ],
+   "info": {
+    "stadium": "Stade de l'Abbé-Deschamps",
+    "capacity": "18 541 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 1,
+     "seasons": [
+      "95/96"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 4,
+     "seasons": [
+      "04/05",
+      "02/03",
+      "95/96",
+      "93/94"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "23/24",
+      "79/80"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Intertoto Cup Champion",
+     "count": 1,
+     "seasons": [
+      "97/98"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/59.png?lm=1461847499"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "sam. 22/08/2026",
+      "time": "17:15",
+      "venue": "away",
+      "opponent": "RC Lens",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/826.png?lm=1595457059",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "sam. 29/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Angers SCO",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1420.png?lm=1687525425",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "sam. 05/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Ol. Lyonnais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1041.png?lm=1656668172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "sam. 12/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "OGC Nice",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/417.png?lm=1408779490",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Stade Brestois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3911.png?lm=1768836091",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Stade Rennais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/273.png?lm=1691503972",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Le Havre AC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/738.png?lm=1408780648",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Le Mans FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1164.png?lm=1459583517",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Arthur Piedfort",
@@ -4224,7 +6027,7 @@
    "slug": "fc-lorient",
    "id": 1158,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1158.png",
-   "accent": "#8c6c51",
+   "accent": "#8c6b4f",
    "squad": [
     {
      "n": "38",
@@ -4403,6 +6206,130 @@
      "val": 1.8
     }
    ],
+   "info": {
+    "stadium": "Stade du Moustoir",
+    "capacity": "16 787 places"
+   },
+   "honours": [
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 1,
+     "seasons": [
+      "01/02"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "24/25",
+      "19/20"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Champion de France de D3",
+     "count": 1,
+     "seasons": [
+      "94/95"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "sam. 22/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "OGC Nice",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/417.png?lm=1408779490",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "sam. 29/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Troyes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1095.png?lm=1599945497",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "sam. 05/09/2026",
+      "time": "17:15",
+      "venue": "away",
+      "opponent": "RC Lens",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/826.png?lm=1595457059",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "sam. 12/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Toulouse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/415.png?lm=1740065124",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Le Mans FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1164.png?lm=1459583517",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Paris FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10004.png?lm=1411995262",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Monaco",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/162.png?lm=1654781919",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Angers SCO",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1420.png?lm=1687525425",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Gabin Bernardeau",
@@ -4495,7 +6422,7 @@
    "slug": "sco-angers",
    "id": 1420,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1420.png",
-   "accent": "#8c8681",
+   "accent": "#8c847e",
    "squad": [
     {
      "n": "1",
@@ -4674,6 +6601,114 @@
      "val": 0.7
     }
    ],
+   "info": {
+    "stadium": "Stade Raymond-Kopa",
+    "capacity": "19 350 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "75/76",
+      "68/69"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "dim. 23/08/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "LOSC Lille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1082.png?lm=1529521041",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "sam. 29/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "AJ Auxerre",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/290.png?lm=1635851977",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "dim. 06/09/2026",
+      "time": "17:15",
+      "venue": "home",
+      "opponent": "Stade Rennais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/273.png?lm=1691503972",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "sam. 12/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Le Havre AC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/738.png?lm=1408780648",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Troyes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1095.png?lm=1599945497",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Stade Brestois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3911.png?lm=1768836091",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Marseille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/244.png?lm=1775675175",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "FC Lorient",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1158.png?lm=1406642498",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Usman Simbakoli",
@@ -4784,7 +6819,7 @@
    "slug": "stade-brest-29",
    "id": 3911,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/3911.png",
-   "accent": "#8c2a2e",
+   "accent": "#8c282c",
    "squad": [
     {
      "n": "30",
@@ -4939,6 +6974,113 @@
      "val": 3.0
     }
    ],
+   "info": {
+    "stadium": "Stade Francis-Le Blé",
+    "capacity": "15 220 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D2",
+     "count": 1,
+     "seasons": [
+      "80/81"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "sam. 22/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Le Mans FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1164.png?lm=1459583517",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "sam. 29/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Toulouse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/415.png?lm=1740065124",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "sam. 05/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Le Havre AC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/738.png?lm=1408780648",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "dim. 13/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "PSG",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/583.png?lm=1728026461",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "AJ Auxerre",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/290.png?lm=1635851977",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Angers SCO",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1420.png?lm=1687525425",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "LOSC Lille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1082.png?lm=1529521041",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "OGC Nice",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/417.png?lm=1408779490",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [],
    "dep": [
     {
@@ -4958,7 +7100,7 @@
    "slug": "ac-le-havre",
    "id": 738,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/738.png",
-   "accent": "#546a8b",
+   "accent": "#50678a",
    "squad": [
     {
      "n": "99",
@@ -5177,6 +7319,134 @@
      "val": 0.1
     }
    ],
+   "info": {
+    "stadium": "Stade Océane",
+    "capacity": "25 178 places"
+   },
+   "honours": [
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 1,
+     "seasons": [
+      "58/59"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 6,
+     "seasons": [
+      "22/23",
+      "07/08",
+      "90/91",
+      "84/85",
+      "58/59",
+      "37/38"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 1,
+     "seasons": [
+      "58/59"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "dim. 23/08/2026",
+      "time": "17:15",
+      "venue": "home",
+      "opponent": "Monaco",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/162.png?lm=1654781919",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "sam. 29/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Ol. Lyonnais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1041.png?lm=1656668172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "sam. 05/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Stade Brestois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3911.png?lm=1768836091",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "sam. 12/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Angers SCO",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1420.png?lm=1687525425",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Toulouse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/415.png?lm=1740065124",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "LOSC Lille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1082.png?lm=1529521041",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "AJ Auxerre",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/290.png?lm=1635851977",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Marseille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/244.png?lm=1775675175",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Junior Mwanga",
@@ -5332,7 +7602,7 @@
    "slug": "es-troyes-ac",
    "id": 1095,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1095.png",
-   "accent": "#557d8c",
+   "accent": "#547c8c",
    "squad": [
     {
      "n": "",
@@ -5527,6 +7797,123 @@
      "val": 0.05
     }
    ],
+   "info": {
+    "stadium": "Stade de l'Aube",
+    "capacity": "20 460 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D2",
+     "count": 3,
+     "seasons": [
+      "25/26",
+      "20/21",
+      "14/15"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Intertoto Cup Champion",
+     "count": 1,
+     "seasons": [
+      "01/02"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/59.png?lm=1461847499"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "sam. 22/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Paris FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10004.png?lm=1411995262",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "sam. 29/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Lorient",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1158.png?lm=1406642498",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "dim. 06/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "R. Strasbourg",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/667.png?lm=1664991833",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "dim. 13/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "LOSC Lille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1082.png?lm=1529521041",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Angers SCO",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1420.png?lm=1687525425",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Marseille",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/244.png?lm=1775675175",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "RC Lens",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/826.png?lm=1595457059",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Toulouse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/415.png?lm=1740065124",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Patrick Beach",
@@ -5619,7 +8006,7 @@
    "slug": "le-mans-fc",
    "id": 1164,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1164.png",
-   "accent": "#8a2612",
+   "accent": "#8b2612",
    "squad": [
     {
      "n": "98",
@@ -5814,6 +8201,104 @@
      "val": 0.4
     }
    ],
+   "info": {
+    "stadium": "Stade Marie-Marvingt",
+    "capacity": "25 064 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 1",
+      "matchday": "1",
+      "date": "sam. 22/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Stade Brestois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3911.png?lm=1768836091",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "2",
+      "date": "dim. 30/08/2026",
+      "time": "17:15",
+      "venue": "away",
+      "opponent": "Stade Rennais",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/273.png?lm=1691503972",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "3",
+      "date": "sam. 05/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "OGC Nice",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/417.png?lm=1408779490",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "4",
+      "date": "dim. 13/09/2026",
+      "time": "17:15",
+      "venue": "home",
+      "opponent": "RC Lens",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/826.png?lm=1595457059",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "5",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "FC Lorient",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1158.png?lm=1406642498",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "6",
+      "date": "sam. 10/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "PSG",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/583.png?lm=1728026461",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "7",
+      "date": "sam. 17/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Toulouse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/415.png?lm=1740065124",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 1",
+      "matchday": "8",
+      "date": "sam. 24/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "AJ Auxerre",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/290.png?lm=1635851977",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Yasser Larouci",
@@ -5996,6 +8481,7 @@
   "PSG|out|Gonçalo Ramos|AC Milan": "2026-08-02",
   "PSG|out|Kang-in Lee|Atlético": "2026-08-02",
   "PSG|out|Noham Kamara|Ol. Lyonnais": "2026-08-02",
+  "PSG|out|Randal Kolo Muani|Juventus": "2026-08-02",
   "PSG|out|Gabriel Moscardo|Esp. Barcelona": "2026-08-02",
   "PSG|out|Renato Marin|Nacional": "2026-08-02",
   "ASM|in|Matthis Abline|FC Nantes": "2026-08-02",

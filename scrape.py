@@ -58,9 +58,13 @@ def scrape_competition(comp, offline=False, squads_only=False):
         print(f"· {c['name']} ({c['code']}) …")
         accent = tm.accent_color(c["logo_url"], offline)
         squad = tm.get_squad(c, SEASON, offline)
+        info = tm.get_club_info(c, offline)
+        honours = tm.get_honours(c, offline)
+        fixtures = tm.get_fixtures(c, SEASON, offline)
         entry = {"code": c["code"], "name": c["name"], "slug": c["slug"],
                  "id": c["id"], "logo_url": c["logo_url"], "accent": accent,
-                 "squad": squad}
+                 "squad": squad, "info": info, "honours": honours,
+                 "fixtures": fixtures}
         if not squads_only:
             arr, dep = tm.get_transfers(c, SEASON, offline)
             entry["arr"], entry["dep"] = arr, dep

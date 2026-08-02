@@ -145,8 +145,10 @@ def build():
             for p in c.get("squad", []):
                 p_ctx = {**p, "val_fmt": fmt_val(p.get("val", 0))}
                 squad_by_group.setdefault(p.get("grp", "MID"), []).append(p_ctx)
+            honours = sorted(c.get("honours", []), key=lambda h: h["count"], reverse=True)
             club_ctx = {"code": c["code"], "name": c["name"], "logo_url": c["logo_url"],
-                       "accent": c["accent"]}
+                       "accent": c["accent"], "info": c.get("info", {}),
+                       "honours": honours, "fixtures": c.get("fixtures", {})}
             html_eq = tpl_eq.render(competition=comp_ctx, all_competitions=all_comps_meta,
                                     club=club_ctx, squad_by_group=squad_by_group)
             open(os.path.join(team_dir, f"{c['code']}.html"), "w", encoding="utf-8").write(html_eq)

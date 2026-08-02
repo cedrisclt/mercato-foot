@@ -286,6 +286,98 @@ def get_squad(club, season, offline=False):
     return players
 
 
+def get_club_info(club, offline=False):
+    """-> {"stadium": str, "capacity": str} from the club's profile page."""
+    url = f"https://www.transfermarkt.fr/{club['slug']}/startseite/verein/{club['id']}"
+    raw = fetch_url(f"profile_{club['id']}.html", url, offline, club["name"] + " profil")
+    if not raw:
+        return {"stadium": "", "capacity": ""}
+    soup = BeautifulSoup(raw, "lxml")
+    info = {"stadium": "", "capacity": ""}
+    for li in soup.select("ul.data-header__items > li.data-header__label"):
+        if li.get_text(" ", strip=True).startswith("Stade:"):
+            a = li.select_one("span.data-header__content a")
+            cap = li.select_one("span.tabellenplatz")
+            info["stadium"] = a.get_text(strip=True) if a else ""
+            cap_txt = cap.get_text(strip=True) if cap else ""
+            info["capacity"] = cap_txt.replace(".", " ").replace("Places", "places")
+            break
+    return info
+
+
+def get_honours(club, offline=False):
+    """-> [{"title","count","seasons":[...],"logo_url"}], most recent first."""
+    url = f"https://www.transfermarkt.fr/{club['slug']}/erfolge/verein/{club['id']}"
+    raw = fetch_url(f"erfolge_{club['id']}.html", url, offline, club["name"] + " palmarès")
+    if not raw:
+        return []
+    soup = BeautifulSoup(raw, "lxml")
+    honours = []
+    for box in soup.select("div.erfolg_infotext_box"):
+        container = box.parent
+        outer = container.parent if container else None
+        h2 = outer.select_one("div.header h2") if outer else None
+        if not h2:
+            continue
+        title_full = h2.get_text(strip=True)
+        m = re.match(r"(\d+)x\s*(.+)", title_full)
+        if not m:
+            continue  # occasional upstream data glitch: trophy image without a name
+        count, title = int(m.group(1)), m.group(2).strip()
+        seasons = [s.strip() for s in box.get_text(" ", strip=True).split(",") if s.strip()]
+        img = container.select_one("div.erfolg_bild_box img")
+        honours.append({"title": title, "count": count, "seasons": seasons,
+                        "logo_url": img["src"] if img else ""})
+    return honours
+
+
+def get_fixtures(club, season, offline=False):
+    """-> {"results": [...], "upcoming": [...]} for the full season schedule
+       (all competitions), each match: comp/matchday/date/time/venue/
+       opponent/opponent_logo/score/played."""
+    url = (f"https://www.transfermarkt.fr/{club['slug']}/spielplandatum/verein/"
+           f"{club['id']}/saison_id/{season}")
+    raw = fetch_url(f"spielplan_{club['id']}.html", url, offline, club["name"] + " calendrier")
+    if not raw:
+        return {"results": [], "upcoming": []}
+    soup = BeautifulSoup(raw, "lxml")
+    table = None
+    for t in soup.find_all("table"):
+        hdr = t.find("tr")
+        if hdr and "Résultat" in hdr.get_text():
+            table = t
+            break
+    if not table:
+        return {"results": [], "upcoming": []}
+
+    current_comp = ""
+    matches = []
+    for r in table.select("tr")[1:]:
+        tds = r.find_all("td", recursive=False)
+        if len(tds) == 1 and "extrarow" in (tds[0].get("class") or []):
+            a = tds[0].find("a")
+            current_comp = a.get_text(strip=True) if a else tds[0].get_text(strip=True)
+            continue
+        if len(tds) < 10:
+            continue
+        venue_raw = tds[3].get_text(strip=True)
+        opp_a = tds[6].find("a")
+        opp_img = tds[5].find("img")
+        score = tds[9].get_text(strip=True)
+        played = bool(score) and score not in ("-:-", "?:?", "")
+        matches.append({
+            "comp": current_comp, "matchday": tds[0].get_text(strip=True),
+            "date": tds[1].get_text(strip=True), "time": tds[2].get_text(strip=True),
+            "venue": {"D": "home", "E": "away"}.get(venue_raw, venue_raw),
+            "opponent": opp_a.get_text(strip=True) if opp_a else tds[6].get_text(strip=True),
+            "opponent_logo": opp_img["src"] if opp_img else "",
+            "score": score if played else "", "played": played,
+        })
+    results = [m for m in matches if m["played"]]
+    upcoming = [m for m in matches if not m["played"]]
+    return {"results": list(reversed(results))[:8], "upcoming": upcoming[:8]}
+
+
 def get_latest_transfers(competition, club_ids, offline=False):
     """Most recent arrivals into any club of `competition` (id -> code map)."""
     url = ("https://www.transfermarkt.fr/transfers/neuestetransfers/statistik"

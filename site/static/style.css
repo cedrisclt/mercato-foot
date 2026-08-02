@@ -276,6 +276,45 @@ h1{font-size:1.7rem;margin:4px 0 20px}
 .team-head-comp{display:flex;align-items:center;gap:8px;margin-bottom:8px;color:rgba(255,255,255,.85);font-size:.85rem;font-weight:600}
 .team-head-comp-logo{width:18px;height:18px;object-fit:contain}
 .team-head h1{margin:0;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.3);font-size:clamp(1.5rem,3vw,2.1rem)}
+.team-head-stadium{margin-top:6px;color:rgba(255,255,255,.85);font-size:.86rem;font-weight:600}
+
+/* ---------- Palmarès ---------- */
+.honours-section{margin-bottom:28px}
+.honours-section h2{
+  font-family:var(--font-display);font-stretch:condensed;text-transform:uppercase;
+  font-size:.94rem;letter-spacing:.04em;color:var(--text);margin:0 0 12px;
+}
+.honours-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:9px}
+.honour-card{
+  display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--radius-md);padding:10px 14px;
+  transition:transform .2s var(--ease),border-color .2s var(--ease);
+}
+.honour-card:hover{transform:translateY(-2px);border-color:color-mix(in srgb, var(--accent) 45%, var(--border))}
+.honour-logo{flex:0 0 auto;width:30px;height:30px;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,0,0,.4))}
+.honour-main{flex:1;min-width:0}
+.honour-title{font-size:.87rem;font-weight:700}
+.honour-count{color:color-mix(in srgb, var(--accent) 70%, #fff 30%);font-weight:800}
+.honour-seasons{font-size:.74rem;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------- Fixtures (résultats / calendrier) ---------- */
+.fixtures-section{margin-bottom:30px}
+.fixtures-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fixture-col h2{
+  font-family:var(--font-display);font-stretch:condensed;text-transform:uppercase;
+  font-size:.82rem;letter-spacing:.04em;color:var(--muted);margin:0 0 10px;
+}
+.fixture-row{
+  display:flex;align-items:center;gap:12px;padding:9px 0;border-top:1px solid var(--border-soft);
+}
+.fixture-row:first-of-type{border-top:none}
+.fixture-date{flex:0 0 auto;font-size:.76rem;color:var(--muted);width:88px;line-height:1.3}
+.fixture-time{display:block;color:var(--muted-dim);font-size:.72rem}
+.fixture-main{flex:1;min-width:0}
+.fixture-comp{display:block;font-size:.68rem;color:var(--muted-dim);text-transform:uppercase;letter-spacing:.03em;margin-bottom:2px}
+.fixture-opp{display:flex;align-items:center;gap:7px;font-size:.87rem;font-weight:600}
+.fixture-opp-logo{width:18px;height:18px;object-fit:contain;flex:0 0 auto}
+.fixture-score{flex:0 0 auto;font-size:.92rem;font-weight:800;font-variant-numeric:tabular-nums}
 
 /* ---------- Squad groups ---------- */
 .squad-group{margin-bottom:26px}
@@ -335,6 +374,7 @@ h1{font-size:1.7rem;margin:4px 0 20px}
   .team-head{flex-direction:column;text-align:center;padding:24px 18px}
   .team-head-comp{justify-content:center}
   .crest-wrap.big{width:88px;height:88px}
+  .fixtures-grid{grid-template-columns:1fr;gap:24px}
 }
 
 @media (max-width:420px){

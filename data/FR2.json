@@ -2,7 +2,7 @@
  "code": "FR2",
  "name": "Ligue 2",
  "season": 2026,
- "updated": "2026-08-02T15:53:23",
+ "updated": "2026-08-02T18:17:17",
  "clubs": [
   {
    "code": "ASSÉ",
@@ -10,7 +10,7 @@
    "slug": "as-saint-etienne",
    "id": 618,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/618.png",
-   "accent": "#4e8c69",
+   "accent": "#4b8c68",
    "squad": [
     {
      "n": "30",
@@ -261,6 +261,174 @@
      "val": 0.7
     }
    ],
+   "info": {
+    "stadium": "Stade Geoffroy-Guichard",
+    "capacity": "41 965 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 10,
+     "seasons": [
+      "80/81",
+      "75/76",
+      "74/75",
+      "73/74",
+      "69/70",
+      "68/69",
+      "67/68",
+      "66/67",
+      "63/64",
+      "56/57"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 6,
+     "seasons": [
+      "76/77",
+      "74/75",
+      "73/74",
+      "69/70",
+      "67/68",
+      "61/62"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Vainqueur Coupe de la Ligue",
+     "count": 1,
+     "seasons": [
+      "12/13"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/37.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 3,
+     "seasons": [
+      "03/04",
+      "98/99",
+      "62/63"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 5,
+     "seasons": [
+      "68/69",
+      "67/68",
+      "66/67",
+      "61/62",
+      "56/57"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    },
+    {
+     "title": "Winner Coupe Charles Drago",
+     "count": 2,
+     "seasons": [
+      "57/58",
+      "54/55"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1026.png?lm=1723473395"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Sochaux",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/750.png?lm=1439104427",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Clermont Foot",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3524.png?lm=1625739356",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "sam. 22/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Grenoble",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1290.png?lm=1711388247",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "lun. 31/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Dijon",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2969.png?lm=1711120027",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Montpellier",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/969.png?lm=1748640687",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "USL Dunkerque",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/9202.png?lm=1750768730",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "FC Metz",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/347.png?lm=1625391843",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Rodez AF",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/11273.png?lm=1498251875",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Thierno Ballo",
@@ -398,7 +566,7 @@
    "slug": "fc-nantes",
    "id": 995,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/995.png",
-   "accent": "#8c7500",
+   "accent": "#8c7600",
    "squad": [
     {
      "n": "1",
@@ -625,6 +793,141 @@
      "val": 2.0
     }
    ],
+   "info": {
+    "stadium": "Stade de la Beaujoire",
+    "capacity": "35 322 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 8,
+     "seasons": [
+      "00/01",
+      "94/95",
+      "82/83",
+      "79/80",
+      "76/77",
+      "72/73",
+      "65/66",
+      "64/65"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 4,
+     "seasons": [
+      "21/22",
+      "99/00",
+      "98/99",
+      "78/79"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 3,
+     "seasons": [
+      "01/02",
+      "99/00",
+      "64/65"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Red Star FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1154.png?lm=1609759172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Stade Lavallois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1080.png?lm=1683046487",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "sam. 22/08/2026",
+      "time": "14:00",
+      "venue": "home",
+      "opponent": "Rodez AF",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/11273.png?lm=1498251875",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "EA Guingamp",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/855.png?lm=1669659728",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "lun. 07/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "AS Nancy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1159.png?lm=1529961068",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "14:00",
+      "venue": "away",
+      "opponent": "FC Sochaux",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/750.png?lm=1439104427",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "14:00",
+      "venue": "away",
+      "opponent": "US Boulogne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7042.png?lm=1750768700",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Stade de Reims",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1421.png?lm=1592601839",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Killian Corredor",
@@ -1006,6 +1309,163 @@
      "val": 0.65
     }
    ],
+   "info": {
+    "stadium": "Stade Auguste-Delaune",
+    "capacity": "20 519 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 6,
+     "seasons": [
+      "61/62",
+      "59/60",
+      "57/58",
+      "54/55",
+      "52/53",
+      "48/49"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 2,
+     "seasons": [
+      "57/58",
+      "49/50"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "17/18",
+      "65/66"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Champion de France de D3",
+     "count": 1,
+     "seasons": [
+      "03/04"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 4,
+     "seasons": [
+      "65/66",
+      "59/60",
+      "57/58",
+      "54/55"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    },
+    {
+     "title": "Winner Coupe Charles Drago",
+     "count": 1,
+     "seasons": [
+      "53/54"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1026.png?lm=1723473395"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Clermont Foot",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3524.png?lm=1625739356",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "USL Dunkerque",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/9202.png?lm=1750768730",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "lun. 24/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "FC Annecy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/30204.png?lm=1720884905",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:00",
+      "venue": "away",
+      "opponent": "Red Star FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1154.png?lm=1609759172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:00",
+      "venue": "home",
+      "opponent": "EA Guingamp",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/855.png?lm=1669659728",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "ven. 11/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "AS Nancy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1159.png?lm=1529961068",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Montpellier",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/969.png?lm=1748640687",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "FC Nantes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/995.png?lm=1581355747",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Samuel Kotto",
@@ -1215,7 +1675,7 @@
    "slug": "fc-metz",
    "id": 347,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/347.png",
-   "accent": "#740003",
+   "accent": "#730003",
    "squad": [
     {
      "n": "1",
@@ -1418,6 +1878,133 @@
      "val": 0.05
     }
    ],
+   "info": {
+    "stadium": "Stade Saint-Symphorien",
+    "capacity": "28 786 places"
+   },
+   "honours": [
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 2,
+     "seasons": [
+      "87/88",
+      "83/84"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Vainqueur Coupe de la Ligue",
+     "count": 1,
+     "seasons": [
+      "95/96"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/37.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 4,
+     "seasons": [
+      "18/19",
+      "13/14",
+      "06/07",
+      "34/35"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "EA Guingamp",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/855.png?lm=1669659728",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Grenoble",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1290.png?lm=1711388247",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "sam. 22/08/2026",
+      "time": "14:00",
+      "venue": "home",
+      "opponent": "Stade Lavallois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1080.png?lm=1683046487",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:00",
+      "venue": "away",
+      "opponent": "FC Annecy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/30204.png?lm=1720884905",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:00",
+      "venue": "home",
+      "opponent": "Rodez AF",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/11273.png?lm=1498251875",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "lun. 14/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Red Star FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1154.png?lm=1609759172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Saint-Étienne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/618.png?lm=1658260152",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Dijon",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2969.png?lm=1711120027",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Cristian Devenish",
@@ -1582,7 +2169,7 @@
    "slug": "montpellier-hsc",
    "id": 969,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/969.png",
-   "accent": "#87888c",
+   "accent": "#87878c",
    "squad": [
     {
      "n": "31",
@@ -1785,6 +2372,139 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade de la Mosson",
+    "capacity": "22 000 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 1,
+     "seasons": [
+      "11/12"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 2,
+     "seasons": [
+      "89/90",
+      "1928/29"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "86/87",
+      "60/61"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Intertoto Cup Champion",
+     "count": 1,
+     "seasons": [
+      "99/00"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/59.png?lm=1461847499"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Dijon",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2969.png?lm=1711120027",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "AS Nancy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1159.png?lm=1529961068",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "ven. 21/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "USL Dunkerque",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/9202.png?lm=1750768730",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "ven. 28/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "US Boulogne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7042.png?lm=1750768700",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Saint-Étienne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/618.png?lm=1658260152",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "ven. 11/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Pau FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3166.png?lm=1652729405",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Stade de Reims",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1421.png?lm=1592601839",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Grenoble",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1290.png?lm=1711388247",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Mamadou Camara",
@@ -1895,7 +2615,7 @@
    "slug": "clermont-foot-63",
    "id": 3524,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/3524.png",
-   "accent": "#70316d",
+   "accent": "#702e6c",
    "squad": [
     {
      "n": "30",
@@ -2074,6 +2794,114 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Gabriel-Montpied",
+    "capacity": "10 800 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D3",
+     "count": 2,
+     "seasons": [
+      "06/07",
+      "01/02"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Stade de Reims",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1421.png?lm=1592601839",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Saint-Étienne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/618.png?lm=1658260152",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "ven. 21/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Dijon",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2969.png?lm=1711120027",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "ven. 28/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "FC Sochaux",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/750.png?lm=1439104427",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "ven. 04/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "USL Dunkerque",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/9202.png?lm=1750768730",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "ven. 11/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "US Boulogne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7042.png?lm=1750768700",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Grenoble",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1290.png?lm=1711388247",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Red Star FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1154.png?lm=1609759172",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Arthur Saintorens",
@@ -2166,7 +2994,7 @@
    "slug": "rodez-af",
    "id": 11273,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/11273.png",
-   "accent": "#8c1d00",
+   "accent": "#8c1d01",
    "squad": [
     {
      "n": "1",
@@ -2353,6 +3181,113 @@
      "val": 0.1
     }
    ],
+   "info": {
+    "stadium": "Stade Paul-Lignon",
+    "capacity": "6 761 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D3",
+     "count": 1,
+     "seasons": [
+      "18/19"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Stade Lavallois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1080.png?lm=1683046487",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Annecy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/30204.png?lm=1720884905",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "sam. 22/08/2026",
+      "time": "14:00",
+      "venue": "away",
+      "opponent": "FC Nantes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/995.png?lm=1581355747",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "ven. 28/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Pau FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3166.png?lm=1652729405",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:00",
+      "venue": "away",
+      "opponent": "FC Metz",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/347.png?lm=1625391843",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "ven. 11/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Grenoble",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1290.png?lm=1711388247",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "AS Nancy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1159.png?lm=1529961068",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Saint-Étienne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/618.png?lm=1658260152",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Mathis Touho",
@@ -2445,7 +3380,7 @@
    "slug": "pau-fc",
    "id": 3166,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/3166.png",
-   "accent": "#807a61",
+   "accent": "#7a755c",
    "squad": [
     {
      "n": "30",
@@ -2632,6 +3567,104 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Nouste Camp",
+    "capacity": "4 144 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "FC Annecy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/30204.png?lm=1720884905",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Dijon",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2969.png?lm=1711120027",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "ven. 21/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "AS Nancy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1159.png?lm=1529961068",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "ven. 28/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Rodez AF",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/11273.png?lm=1498251875",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "ven. 04/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "FC Sochaux",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/750.png?lm=1439104427",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "ven. 11/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Montpellier",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/969.png?lm=1748640687",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "USL Dunkerque",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/9202.png?lm=1750768730",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Stade Lavallois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1080.png?lm=1683046487",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Babacar Leye",
@@ -2868,7 +3901,7 @@
    "slug": "red-star-fc",
    "id": 1154,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1154.png",
-   "accent": "#6f6a62",
+   "accent": "#645b52",
    "squad": [
     {
      "n": "16",
@@ -3039,6 +4072,136 @@
      "val": 0.3
     }
    ],
+   "info": {
+    "stadium": "Stade Bauer",
+    "capacity": "5 600 places"
+   },
+   "honours": [
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 5,
+     "seasons": [
+      "41/42",
+      "1927/28",
+      "1922/23",
+      "1921/22",
+      "1920/21"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D3",
+     "count": 3,
+     "seasons": [
+      "23/24",
+      "17/18",
+      "14/15"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "38/39",
+      "33/34"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Nantes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/995.png?lm=1581355747",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "FC Sochaux",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/750.png?lm=1439104427",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "ven. 21/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "US Boulogne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7042.png?lm=1750768700",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:00",
+      "venue": "home",
+      "opponent": "Stade de Reims",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1421.png?lm=1592601839",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "ven. 04/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Stade Lavallois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1080.png?lm=1683046487",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "lun. 14/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "FC Metz",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/347.png?lm=1625391843",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "14:00",
+      "venue": "away",
+      "opponent": "EA Guingamp",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/855.png?lm=1669659728",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Clermont Foot",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3524.png?lm=1625739356",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Elyaz Zidane",
@@ -3095,7 +4258,7 @@
    "slug": "grenoble-foot-38",
    "id": 1290,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1290.png",
-   "accent": "#3b608c",
+   "accent": "#2c588c",
    "squad": [
     {
      "n": "",
@@ -3306,6 +4469,122 @@
      "val": 0.1
     }
    ],
+   "info": {
+    "stadium": "Stade des Alpes",
+    "capacity": "20 068 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "61/62",
+      "59/60"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Champion de France de D3",
+     "count": 1,
+     "seasons": [
+      "00/01"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "USL Dunkerque",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/9202.png?lm=1750768730",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "FC Metz",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/347.png?lm=1625391843",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "sam. 22/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Saint-Étienne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/618.png?lm=1658260152",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "ven. 28/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Stade Lavallois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1080.png?lm=1683046487",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "ven. 04/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "FC Annecy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/30204.png?lm=1720884905",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "ven. 11/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Rodez AF",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/11273.png?lm=1498251875",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Clermont Foot",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3524.png?lm=1625739356",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Montpellier",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/969.png?lm=1748640687",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Yohann Magnin",
@@ -3461,7 +4740,7 @@
    "slug": "ea-guingamp",
    "id": 855,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/855.png",
-   "accent": "#8c3b3e",
+   "accent": "#8c383c",
    "squad": [
     {
      "n": "16",
@@ -3664,6 +4943,122 @@
      "val": 0.7
     }
    ],
+   "info": {
+    "stadium": "Stade de Roudourou",
+    "capacity": "18 462 places"
+   },
+   "honours": [
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 2,
+     "seasons": [
+      "13/14",
+      "08/09"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Intertoto Cup Champion",
+     "count": 1,
+     "seasons": [
+      "96/97"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/59.png?lm=1461847499"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Metz",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/347.png?lm=1625391843",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "US Boulogne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7042.png?lm=1750768700",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "ven. 21/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "FC Sochaux",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/750.png?lm=1439104427",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "FC Nantes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/995.png?lm=1581355747",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:00",
+      "venue": "away",
+      "opponent": "Stade de Reims",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1421.png?lm=1592601839",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "14:00",
+      "venue": "home",
+      "opponent": "FC Annecy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/30204.png?lm=1720884905",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "14:00",
+      "venue": "home",
+      "opponent": "Red Star FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1154.png?lm=1609759172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "AS Nancy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1159.png?lm=1529961068",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Teddy Averlant",
@@ -3792,7 +5187,7 @@
    "slug": "as-nancy-lorraine",
    "id": 1159,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1159.png",
-   "accent": "#8c494d",
+   "accent": "#8c4044",
    "squad": [
     {
      "n": "1",
@@ -4003,6 +5398,141 @@
      "val": 0.2
     }
    ],
+   "info": {
+    "stadium": "Stade Marcel-Picot",
+    "capacity": "20 087 places"
+   },
+   "honours": [
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 1,
+     "seasons": [
+      "77/78"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Vainqueur Coupe de la Ligue",
+     "count": 1,
+     "seasons": [
+      "05/06"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/37.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 5,
+     "seasons": [
+      "15/16",
+      "04/05",
+      "97/98",
+      "89/90",
+      "74/75"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Champion de France de D3",
+     "count": 1,
+     "seasons": [
+      "24/25"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "US Boulogne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7042.png?lm=1750768700",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Montpellier",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/969.png?lm=1748640687",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "ven. 21/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Pau FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3166.png?lm=1652729405",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "ven. 28/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "USL Dunkerque",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/9202.png?lm=1750768730",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "lun. 07/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Nantes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/995.png?lm=1581355747",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "ven. 11/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Stade de Reims",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1421.png?lm=1592601839",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Rodez AF",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/11273.png?lm=1498251875",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "EA Guingamp",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/855.png?lm=1669659728",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Issam Bouaoune",
@@ -4167,7 +5697,7 @@
    "slug": "fc-annecy",
    "id": 30204,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/30204.png",
-   "accent": "#8c151c",
+   "accent": "#8c161c",
    "squad": [
     {
      "n": "1",
@@ -4394,6 +5924,104 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Parc des Sports d’Annecy",
+    "capacity": "13 634 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Pau FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3166.png?lm=1652729405",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Rodez AF",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/11273.png?lm=1498251875",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "lun. 24/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Stade de Reims",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1421.png?lm=1592601839",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:00",
+      "venue": "home",
+      "opponent": "FC Metz",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/347.png?lm=1625391843",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "ven. 04/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Grenoble",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1290.png?lm=1711388247",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "14:00",
+      "venue": "away",
+      "opponent": "EA Guingamp",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/855.png?lm=1669659728",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Dijon",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2969.png?lm=1711120027",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "USL Dunkerque",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/9202.png?lm=1750768730",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Pascal Mozie",
@@ -4522,7 +6150,7 @@
    "slug": "stade-laval",
    "id": 1080,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1080.png",
-   "accent": "#8c664c",
+   "accent": "#8c5f40",
    "squad": [
     {
      "n": "30",
@@ -4717,6 +6345,113 @@
      "val": 0.1
     }
    ],
+   "info": {
+    "stadium": "Stade Francis Le Basser",
+    "capacity": "11 107 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D3",
+     "count": 1,
+     "seasons": [
+      "21/22"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Rodez AF",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/11273.png?lm=1498251875",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "FC Nantes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/995.png?lm=1581355747",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "sam. 22/08/2026",
+      "time": "14:00",
+      "venue": "away",
+      "opponent": "FC Metz",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/347.png?lm=1625391843",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "ven. 28/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Grenoble",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1290.png?lm=1711388247",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "ven. 04/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Red Star FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1154.png?lm=1609759172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "ven. 11/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Dijon",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2969.png?lm=1711120027",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "FC Sochaux",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/750.png?lm=1439104427",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Pau FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3166.png?lm=1652729405",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Francis Coquelin",
@@ -4899,7 +6634,7 @@
    "slug": "usl-dunkerque",
    "id": 9202,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/9202.png",
-   "accent": "#5f6061",
+   "accent": "#5f6060",
    "squad": [
     {
      "n": "16",
@@ -5086,6 +6821,104 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Marcel-Tribut",
+    "capacity": "4 933 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Grenoble",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1290.png?lm=1711388247",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Stade de Reims",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1421.png?lm=1592601839",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "ven. 21/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Montpellier",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/969.png?lm=1748640687",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "ven. 28/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "AS Nancy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1159.png?lm=1529961068",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "ven. 04/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Clermont Foot",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3524.png?lm=1625739356",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Saint-Étienne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/618.png?lm=1658260152",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Pau FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3166.png?lm=1652729405",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "FC Annecy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/30204.png?lm=1720884905",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Jordan Morel",
@@ -5286,7 +7119,7 @@
    "slug": "us-boulogne",
    "id": 7042,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/7042.png",
-   "accent": "#8c585a",
+   "accent": "#8c5557",
    "squad": [
     {
      "n": "99",
@@ -5489,6 +7322,104 @@
      "val": 0.07
     }
    ],
+   "info": {
+    "stadium": "Stade de la Libération",
+    "capacity": "15 004 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "AS Nancy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1159.png?lm=1529961068",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "EA Guingamp",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/855.png?lm=1669659728",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "ven. 21/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Red Star FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1154.png?lm=1609759172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "ven. 28/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Montpellier",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/969.png?lm=1748640687",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "ven. 04/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Dijon",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2969.png?lm=1711120027",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "ven. 11/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Clermont Foot",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3524.png?lm=1625739356",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "14:00",
+      "venue": "home",
+      "opponent": "FC Nantes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/995.png?lm=1581355747",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "FC Sochaux",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/750.png?lm=1439104427",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Aymane Nassiri",
@@ -5644,7 +7575,7 @@
    "slug": "fc-sochaux-montbeliard",
    "id": 750,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/750.png",
-   "accent": "#718388",
+   "accent": "#6d8084",
    "squad": [
     {
      "n": "30",
@@ -5823,6 +7754,150 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Auguste-Bonal",
+    "capacity": "20 005 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France",
+     "count": 2,
+     "seasons": [
+      "37/38",
+      "34/35"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/14.png?lm=1729163534"
+    },
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 2,
+     "seasons": [
+      "06/07",
+      "36/37"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Vainqueur Coupe de la Ligue",
+     "count": 1,
+     "seasons": [
+      "03/04"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/37.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "00/01",
+      "46/47"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Winner Coupe Charles Drago",
+     "count": 3,
+     "seasons": [
+      "63/64",
+      "62/63",
+      "52/53"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1026.png?lm=1723473395"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Saint-Étienne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/618.png?lm=1658260152",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Red Star FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1154.png?lm=1609759172",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "ven. 21/08/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "EA Guingamp",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/855.png?lm=1669659728",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "ven. 28/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Clermont Foot",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3524.png?lm=1625739356",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "ven. 04/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Pau FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3166.png?lm=1652729405",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "14:00",
+      "venue": "home",
+      "opponent": "FC Nantes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/995.png?lm=1581355747",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Stade Lavallois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1080.png?lm=1683046487",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "US Boulogne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7042.png?lm=1750768700",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Victor Lobry",
@@ -5951,7 +8026,7 @@
    "slug": "dijon-fco",
    "id": 2969,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/2969.png",
-   "accent": "#8c3040",
+   "accent": "#8c2d3d",
    "squad": [
     {
      "n": "16",
@@ -6138,6 +8213,113 @@
      "val": 0.07
     }
    ],
+   "info": {
+    "stadium": "Stade Gaston-Gérard",
+    "capacity": "16 098 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D3",
+     "count": 1,
+     "seasons": [
+      "25/26"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 2",
+      "matchday": "1",
+      "date": "sam. 08/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Montpellier",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/969.png?lm=1748640687",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Pau FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3166.png?lm=1652729405",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "3",
+      "date": "ven. 21/08/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "Clermont Foot",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3524.png?lm=1625739356",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "4",
+      "date": "lun. 31/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Saint-Étienne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/618.png?lm=1658260152",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "5",
+      "date": "ven. 04/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "US Boulogne",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7042.png?lm=1750768700",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "6",
+      "date": "ven. 11/09/2026",
+      "time": "20:00",
+      "venue": "home",
+      "opponent": "Stade Lavallois",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1080.png?lm=1683046487",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "7",
+      "date": "ven. 18/09/2026",
+      "time": "20:00",
+      "venue": "away",
+      "opponent": "FC Annecy",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/30204.png?lm=1720884905",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 2",
+      "matchday": "8",
+      "date": "ven. 09/10/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "FC Metz",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/347.png?lm=1625391843",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Moussa Faty",

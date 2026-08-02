@@ -2,7 +2,7 @@
  "code": "FR3",
  "name": "National",
  "season": 2026,
- "updated": "2026-08-02T15:54:06",
+ "updated": "2026-08-02T18:19:06",
  "clubs": [
   {
    "code": "SCB",
@@ -10,7 +10,7 @@
    "slug": "sc-bastia",
    "id": 595,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/595.png",
-   "accent": "#36578c",
+   "accent": "#33548c",
    "squad": [
     {
      "n": "",
@@ -205,6 +205,147 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Armand-Cesari",
+    "capacity": "16 480 places"
+   },
+   "honours": [
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 1,
+     "seasons": [
+      "80/81"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    },
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "11/12",
+      "67/68"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Champion de France de D3",
+     "count": 2,
+     "seasons": [
+      "20/21",
+      "10/11"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    },
+    {
+     "title": "Intertoto Cup Champion",
+     "count": 1,
+     "seasons": [
+      "97/98"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/59.png?lm=1461847499"
+    },
+    {
+     "title": "Vainqueur Trophée des Champions",
+     "count": 1,
+     "seasons": [
+      "71/72"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/321.png?lm=1704485193"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Le Puy FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/26863.png?lm=1781479034",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "away",
+      "opponent": "Aubagne Air Bel",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/42609.png?lm=1756117096",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "FC Versailles",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/13466.png?lm=1652140831",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "jeu. 27/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "SM Caen",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1162.png?lm=1692825012",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "Amiens SC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1416.png?lm=1688037499",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Bourg-en-Bresse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2972.png?lm=1546256460",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "AS Cannes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/895.png?lm=1675856288",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Paris 13 Atl.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/62382.png?lm=1593006334",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Juan Guevara",
@@ -629,6 +770,104 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Crédit Agricole la Licorne",
+    "capacity": "12 999 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Fleury 91",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/17442.png?lm=1779118420",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "home",
+      "opponent": "VFC La Roche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3541.png?lm=1758808994",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Le Puy FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/26863.png?lm=1781479034",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "FC Versailles",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/13466.png?lm=1652140831",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "SC Bastia",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/595.png?lm=1721932444",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "AS Cannes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/895.png?lm=1675856288",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "US Orléans",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10868.png?lm=1459609692",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "QRM",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7124.png?lm=1529961195",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Adrien Julloux",
@@ -919,7 +1158,7 @@
    "slug": "fc-versailles",
    "id": 13466,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/13466.png",
-   "accent": "#6c788c",
+   "accent": "#69778c",
    "squad": [
     {
      "n": "30",
@@ -1122,6 +1361,104 @@
      "val": 0.25
     }
    ],
+   "info": {
+    "stadium": "Stade Municipal Georges Lefèvre",
+    "capacity": "1 000 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "VFC La Roche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3541.png?lm=1758808994",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "home",
+      "opponent": "Le Puy FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/26863.png?lm=1781479034",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "SC Bastia",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/595.png?lm=1721932444",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "Amiens SC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1416.png?lm=1688037499",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "AS Cannes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/895.png?lm=1675856288",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "US Orléans",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10868.png?lm=1459609692",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "QRM",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7124.png?lm=1529961195",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "FC Villefranche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/18633.png?lm=1546256358",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Jordan Leborgne",
@@ -1268,7 +1605,7 @@
    "slug": "sm-caen",
    "id": 1162,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1162.png",
-   "accent": "#816b6d",
+   "accent": "#7f6768",
    "squad": [
     {
      "n": "1",
@@ -1463,6 +1800,114 @@
      "val": 0.03
     }
    ],
+   "info": {
+    "stadium": "Stade Michel-d'Ornano",
+    "capacity": "20 500 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "09/10",
+      "95/96"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Valenciennes FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1423.png?lm=1408780358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "away",
+      "opponent": "Thionville Lus.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/94385.png?lm=1676416951",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Aubagne Air Bel",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/42609.png?lm=1756117096",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "jeu. 27/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "SC Bastia",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/595.png?lm=1721932444",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "Bourg-en-Bresse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2972.png?lm=1546256460",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "Paris 13 Atl.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/62382.png?lm=1593006334",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Concarneau",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/21688.png?lm=1498671769",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "FC Rouen 1899",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1564.png?lm=1662479309",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Dennis Appiah",
@@ -1600,7 +2045,7 @@
    "slug": "fc-valenciennes",
    "id": 1423,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1423.png",
-   "accent": "#8c2b2f",
+   "accent": "#8c282c",
    "squad": [
     {
      "n": "1",
@@ -1795,6 +2240,122 @@
      "val": 0.03
     }
    ],
+   "info": {
+    "stadium": "Stade du Hainaut",
+    "capacity": "25 000 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D2",
+     "count": 2,
+     "seasons": [
+      "05/06",
+      "71/72"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    },
+    {
+     "title": "Champion de France de D3",
+     "count": 1,
+     "seasons": [
+      "04/05"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "SM Caen",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1162.png?lm=1692825012",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "home",
+      "opponent": "Bourg-en-Bresse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2972.png?lm=1546256460",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Paris 13 Atl.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/62382.png?lm=1593006334",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "Concarneau",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/21688.png?lm=1498671769",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "jeu. 03/09/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Rouen 1899",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1564.png?lm=1662479309",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "FC Fleury 91",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/17442.png?lm=1779118420",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "VFC La Roche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3541.png?lm=1758808994",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "Le Puy FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/26863.png?lm=1781479034",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Dany Goprou",
@@ -1986,7 +2547,7 @@
    "slug": "us-orleans",
    "id": 10868,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/10868.png",
-   "accent": "#8c4d04",
+   "accent": "#8c4d05",
    "squad": [
     {
      "n": "1",
@@ -2165,6 +2726,113 @@
      "val": 0.2
     }
    ],
+   "info": {
+    "stadium": "Stade de la Source",
+    "capacity": "7 533 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D3",
+     "count": 1,
+     "seasons": [
+      "13/14"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Concarneau",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/21688.png?lm=1498671769",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "home",
+      "opponent": "FC Rouen 1899",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1564.png?lm=1662479309",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Fleury 91",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/17442.png?lm=1779118420",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "VFC La Roche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3541.png?lm=1758808994",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "Le Puy FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/26863.png?lm=1781479034",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "FC Versailles",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/13466.png?lm=1652140831",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Amiens SC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1416.png?lm=1688037499",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "AS Cannes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/895.png?lm=1675856288",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Boubacar Diakhaby",
@@ -2320,7 +2988,7 @@
    "slug": "football-club-fleury-91",
    "id": 17442,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/17442.png",
-   "accent": "#825c60",
+   "accent": "#8a6064",
    "squad": [
     {
      "n": "40",
@@ -2523,6 +3191,104 @@
      "val": 0.1
     }
    ],
+   "info": {
+    "stadium": "Essonne Stadium",
+    "capacity": "18 850 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Amiens SC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1416.png?lm=1688037499",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "away",
+      "opponent": "AS Cannes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/895.png?lm=1675856288",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "US Orléans",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10868.png?lm=1459609692",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "QRM",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7124.png?lm=1529961195",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "FC Villefranche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/18633.png?lm=1546256358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Valenciennes FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1423.png?lm=1408780358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "Thionville Lus.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/94385.png?lm=1676416951",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Aubagne Air Bel",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/42609.png?lm=1756117096",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Titouan Thomas",
@@ -2633,7 +3399,7 @@
    "slug": "fc-villefranche-beaujolais",
    "id": 18633,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/18633.png",
-   "accent": "#41628c",
+   "accent": "#40628c",
    "squad": [
     {
      "n": "1",
@@ -2804,6 +3570,104 @@
      "val": 0.12
     }
    ],
+   "info": {
+    "stadium": "Stade Armand-Chouffet",
+    "capacity": "4 000 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Bourg-en-Bresse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2972.png?lm=1546256460",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "home",
+      "opponent": "Paris 13 Atl.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/62382.png?lm=1593006334",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Concarneau",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/21688.png?lm=1498671769",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "FC Rouen 1899",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1564.png?lm=1662479309",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "FC Fleury 91",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/17442.png?lm=1779118420",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "VFC La Roche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3541.png?lm=1758808994",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Le Puy FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/26863.png?lm=1781479034",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "FC Versailles",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/13466.png?lm=1652140831",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Mathieu Cachbach",
@@ -3049,7 +3913,7 @@
    "slug": "paris-13-atletico",
    "id": 62382,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/62382.png",
-   "accent": "#286823",
+   "accent": "#2b6a27",
    "squad": [
     {
      "n": "",
@@ -3284,6 +4148,104 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Charléty",
+    "capacity": "20 000 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "QRM",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7124.png?lm=1529961195",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "away",
+      "opponent": "FC Villefranche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/18633.png?lm=1546256358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Valenciennes FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1423.png?lm=1408780358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "Thionville Lus.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/94385.png?lm=1676416951",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "Aubagne Air Bel",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/42609.png?lm=1756117096",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "SM Caen",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1162.png?lm=1692825012",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Bourg-en-Bresse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2972.png?lm=1546256460",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "SC Bastia",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/595.png?lm=1721932444",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Axel Temperton",
@@ -3502,7 +4464,7 @@
    "slug": "us-concarneau",
    "id": 21688,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/21688.png",
-   "accent": "#364f8c",
+   "accent": "#374f8c",
    "squad": [
     {
      "n": "1",
@@ -3705,6 +4667,113 @@
      "val": 0.1
     }
    ],
+   "info": {
+    "stadium": "Stade Guy Piriou",
+    "capacity": "2 539 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D3",
+     "count": 1,
+     "seasons": [
+      "22/23"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1282.png?lm=1780400420"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "US Orléans",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10868.png?lm=1459609692",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "away",
+      "opponent": "QRM",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7124.png?lm=1529961195",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "FC Villefranche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/18633.png?lm=1546256358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "Valenciennes FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1423.png?lm=1408780358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "Thionville Lus.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/94385.png?lm=1676416951",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Aubagne Air Bel",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/42609.png?lm=1756117096",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "SM Caen",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1162.png?lm=1692825012",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Bourg-en-Bresse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2972.png?lm=1546256460",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Stan Janno",
@@ -3842,7 +4911,7 @@
    "slug": "fc-rouen-1899",
    "id": 1564,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/1564.png",
-   "accent": "#8c4d4f",
+   "accent": "#8c4b4c",
    "squad": [
     {
      "n": "1",
@@ -4005,6 +5074,113 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Robert Diochon",
+    "capacity": "8 372 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D2",
+     "count": 1,
+     "seasons": [
+      "35/36"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/981.png?lm=1734352209"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "AS Cannes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/895.png?lm=1675856288",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "away",
+      "opponent": "US Orléans",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10868.png?lm=1459609692",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "QRM",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7124.png?lm=1529961195",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "FC Villefranche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/18633.png?lm=1546256358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "jeu. 03/09/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Valenciennes FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1423.png?lm=1408780358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Thionville Lus.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/94385.png?lm=1676416951",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "Aubagne Air Bel",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/42609.png?lm=1756117096",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "SM Caen",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1162.png?lm=1692825012",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Issiaka Karamoko",
@@ -4259,7 +5435,7 @@
    "slug": "le-puy-foot-43-auvergne",
    "id": 26863,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/26863.png",
-   "accent": "#6a7b8c",
+   "accent": "#687a8c",
    "squad": [
     {
      "n": "30",
@@ -4430,6 +5606,113 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Charles-Massot",
+    "capacity": "4 800 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D4",
+     "count": 1,
+     "seasons": [
+      "24/25"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1299.png?lm=1781258513"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "SC Bastia",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/595.png?lm=1721932444",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "away",
+      "opponent": "FC Versailles",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/13466.png?lm=1652140831",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Amiens SC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1416.png?lm=1688037499",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "AS Cannes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/895.png?lm=1675856288",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "US Orléans",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10868.png?lm=1459609692",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "QRM",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7124.png?lm=1529961195",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "FC Villefranche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/18633.png?lm=1546256358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Valenciennes FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1423.png?lm=1408780358",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Raouf Mroivili",
@@ -4775,6 +6058,104 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Robert Diochon",
+    "capacity": "8 372 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Paris 13 Atl.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/62382.png?lm=1593006334",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "home",
+      "opponent": "Concarneau",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/21688.png?lm=1498671769",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Rouen 1899",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1564.png?lm=1662479309",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "FC Fleury 91",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/17442.png?lm=1779118420",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "VFC La Roche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3541.png?lm=1758808994",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Le Puy FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/26863.png?lm=1781479034",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "FC Versailles",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/13466.png?lm=1652140831",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "Amiens SC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1416.png?lm=1688037499",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Mathis Hamdi",
@@ -5038,7 +6419,7 @@
    "slug": "bourg-en-bresse-peronnas-01",
    "id": 2972,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/2972.png",
-   "accent": "#32658c",
+   "accent": "#30648c",
    "squad": [
     {
      "n": "",
@@ -5281,6 +6662,104 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Marcel-Verchère",
+    "capacity": "8 100 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "FC Villefranche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/18633.png?lm=1546256358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "away",
+      "opponent": "Valenciennes FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1423.png?lm=1408780358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Thionville Lus.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/94385.png?lm=1676416951",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "Aubagne Air Bel",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/42609.png?lm=1756117096",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "SM Caen",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1162.png?lm=1692825012",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "SC Bastia",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/595.png?lm=1721932444",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "Paris 13 Atl.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/62382.png?lm=1593006334",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "Concarneau",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/21688.png?lm=1498671769",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Lenny Montfort",
@@ -5499,7 +6978,7 @@
    "slug": "as-cannes",
    "id": 895,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/895.png",
-   "accent": "#8c4447",
+   "accent": "#8c3b3e",
    "squad": [
     {
      "n": "1",
@@ -5694,6 +7173,113 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Pierre-de-Coubertin",
+    "capacity": "12 800 places"
+   },
+   "honours": [
+    {
+     "title": "Vainqueur Coupe de France",
+     "count": 1,
+     "seasons": [
+      "31/32"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/35.png?lm=1520606999"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "FC Rouen 1899",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1564.png?lm=1662479309",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "home",
+      "opponent": "FC Fleury 91",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/17442.png?lm=1779118420",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "VFC La Roche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3541.png?lm=1758808994",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "Le Puy FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/26863.png?lm=1781479034",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "FC Versailles",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/13466.png?lm=1652140831",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "Amiens SC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1416.png?lm=1688037499",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "SC Bastia",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/595.png?lm=1721932444",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "Inconnu",
+      "venue": "away",
+      "opponent": "US Orléans",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10868.png?lm=1459609692",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Loup Hervieu",
@@ -5849,7 +7435,7 @@
    "slug": "aubagne-fc",
    "id": 42609,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/42609.png",
-   "accent": "#75707e",
+   "accent": "#777380",
    "squad": [
     {
      "n": "30",
@@ -6028,6 +7614,113 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade de Lattre-de-Tassigny",
+    "capacity": "3 000 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D4",
+     "count": 1,
+     "seasons": [
+      "23/24"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1299.png?lm=1781258513"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "Thionville Lus.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/94385.png?lm=1676416951",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "home",
+      "opponent": "SC Bastia",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/595.png?lm=1721932444",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "SM Caen",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1162.png?lm=1692825012",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "Bourg-en-Bresse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2972.png?lm=1546256460",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "Paris 13 Atl.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/62382.png?lm=1593006334",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "Concarneau",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/21688.png?lm=1498671769",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "FC Rouen 1899",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1564.png?lm=1662479309",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "FC Fleury 91",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/17442.png?lm=1779118420",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Rayane Doucouré",
@@ -6246,7 +7939,7 @@
    "slug": "us-thionville-lusitanos",
    "id": 94385,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/94385.png",
-   "accent": "#8c836a",
+   "accent": "#8c8267",
    "squad": [
     {
      "n": "40",
@@ -6433,6 +8126,104 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Omnisports de Guentrange",
+    "capacity": "3 000 places"
+   },
+   "honours": [],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Aubagne Air Bel",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/42609.png?lm=1756117096",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "home",
+      "opponent": "SM Caen",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1162.png?lm=1692825012",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "away",
+      "opponent": "Bourg-en-Bresse",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/2972.png?lm=1546256460",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "Paris 13 Atl.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/62382.png?lm=1593006334",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "Concarneau",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/21688.png?lm=1498671769",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "FC Rouen 1899",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1564.png?lm=1662479309",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "FC Fleury 91",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/17442.png?lm=1779118420",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "home",
+      "opponent": "VFC La Roche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/3541.png?lm=1758808994",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Fadel Gobitaka",
@@ -6570,7 +8361,7 @@
    "slug": "la-roche-vendee-football",
    "id": 3541,
    "logo_url": "https://tmssl.akamaized.net/images/wappen/head/3541.png",
-   "accent": "#8c3739",
+   "accent": "#8c3639",
    "squad": [
     {
      "n": "1",
@@ -6757,6 +8548,113 @@
      "val": 0.0
     }
    ],
+   "info": {
+    "stadium": "Stade Henri-Desgrange",
+    "capacity": "10 000 places"
+   },
+   "honours": [
+    {
+     "title": "Champion de France de D4",
+     "count": 1,
+     "seasons": [
+      "25/26"
+     ],
+     "logo_url": "https://tmssl.akamaized.net//images/erfolge/medium/1299.png?lm=1781258513"
+    }
+   ],
+   "fixtures": {
+    "results": [],
+    "upcoming": [
+     {
+      "comp": "Ligue 3",
+      "matchday": "1",
+      "date": "ven. 07/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "FC Versailles",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/13466.png?lm=1652140831",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "2",
+      "date": "ven. 14/08/2026",
+      "time": "19:00",
+      "venue": "away",
+      "opponent": "Amiens SC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1416.png?lm=1688037499",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "3",
+      "date": "jeu. 20/08/2026",
+      "time": "20:45",
+      "venue": "home",
+      "opponent": "AS Cannes",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/895.png?lm=1675856288",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "4",
+      "date": "sam. 29/08/2026",
+      "time": "14:45",
+      "venue": "away",
+      "opponent": "US Orléans",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/10868.png?lm=1459609692",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "5",
+      "date": "sam. 05/09/2026",
+      "time": "14:45",
+      "venue": "home",
+      "opponent": "QRM",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/7124.png?lm=1529961195",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "6",
+      "date": "sam. 12/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "FC Villefranche",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/18633.png?lm=1546256358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "7",
+      "date": "sam. 19/09/2026",
+      "time": "Inconnu",
+      "venue": "home",
+      "opponent": "Valenciennes FC",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/1423.png?lm=1408780358",
+      "score": "",
+      "played": false
+     },
+     {
+      "comp": "Ligue 3",
+      "matchday": "8",
+      "date": "sam. 26/09/2026",
+      "time": "15:00",
+      "venue": "away",
+      "opponent": "Thionville Lus.",
+      "opponent_logo": "https://tmssl.akamaized.net//images/wappen/tiny/94385.png?lm=1676416951",
+      "score": "",
+      "played": false
+     }
+    ]
+   },
    "arr": [
     {
      "p": "Mattéo Rabuel",
